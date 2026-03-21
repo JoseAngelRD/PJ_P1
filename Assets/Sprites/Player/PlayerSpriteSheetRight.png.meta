@@ -1,0 +1,4096 @@
+fileFormatVersion: 2
+guid: aaaedf00d830d604db494451c5b072c6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1665
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2bfd065b195aa644beb8a537bb799ab
+      internalID: -724162585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1665
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b844dba053d91b44895b90d628789303
+      internalID: 40975968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1665
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3a1864dcad31a4f8f7c69f2f3d046c
+      internalID: -1691334423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_3
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1665
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080a37b249ebab54ebd05a7e6c1844ab
+      internalID: -1671466060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1665
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2387546040b0447b3992c6b3ba8687
+      internalID: 1044153442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_5
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1665
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1740530c6ceba4094d0c1690512fef
+      internalID: -1229086888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_6
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1665
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb29f040d4b13d458d66c1f8269c627
+      internalID: 1477840134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_7
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 1665
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729206ba65e981a4a983b42d34a5df40
+      internalID: 570944244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_8
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1537
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfa8339b8ba11d4d8c168d15726fdcc
+      internalID: 1634165977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_9
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1539
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d68e13a2b28d724fa8c5293a1cf5279
+      internalID: 150416014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_10
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1537
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ea2a8ea43db184f8be9e75fa0fe28e
+      internalID: -31058208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_11
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1537
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08d5c59a478e7e4ba775db9f28f401d
+      internalID: -1499403628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_12
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 1537
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5be0743460f51140adcdcc1a2948fd6
+      internalID: -456272392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_13
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1537
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9955d7cf40a354d4ba8fcaaec647594f
+      internalID: 921012802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_14
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1537
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2421fb7b24e6124ebf8d32ac315f5bc
+      internalID: -1186339678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_15
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 1537
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775ed99e40e3eef4889fc46a8a14c3d9
+      internalID: -2058739481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1409
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea9ff8946c996045a4429a91e149d52
+      internalID: -437123390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_17
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1409
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a80e321ebc5bfe4a95c380e1707c951
+      internalID: -1775354381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_18
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1409
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8438416dcfdcd4bbd50cd839e4fee3
+      internalID: -2126730448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1283
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96acb1c3833b8b54e9914d09a6d15a72
+      internalID: -854517823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_20
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1283
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfba7ec214299d445be825c079193ba3
+      internalID: -677291013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_21
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1283
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231370f4dc90a7844a99d112b02c2532
+      internalID: 1956333112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_22
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1153
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544b3cbfc30be5144b5774c193ad7fd8
+      internalID: -311720976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_23
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0821eca2b29e2f47afbcc67ae54693d
+      internalID: -1660907336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_24
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc351ba6715ef734081f4ed5d2d6a070
+      internalID: 699984949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_25
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b2497d385a95743a4cb576ef2b43fd
+      internalID: 1201935575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743318c1b346d3347b9c00a1c8680e9a
+      internalID: -1150351321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_27
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5fad8e521bab14d889e75a7621bec5
+      internalID: 775182113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_28
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 1153
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a831af6d236709448b7dc4b8a679cad1
+      internalID: -852087998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_29
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 1154
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b334962634a5943891c7babafa0f49
+      internalID: -395538236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_30
+      rect:
+        serializedVersion: 2
+        x: 2433
+        y: 1155
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d38713c59ddc154f8bf8dc72c6f53d8
+      internalID: 1231625075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_31
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 1156
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478fcc244beef1c44828358bd29a95aa
+      internalID: 328602025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_32
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ca32d34d1a75a4b85af1b08ced39df
+      internalID: -655131275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_33
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0f9880311cb0e4ea9693705aa884ab
+      internalID: -32624036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_34
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6511dec3317c56942aa5fa42ea4450b6
+      internalID: -963145631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_35
+      rect:
+        serializedVersion: 2
+        x: 3873
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0593f55ffef2a42998118a17883bb7
+      internalID: 2060678834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_36
+      rect:
+        serializedVersion: 2
+        x: 4161
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee400ad84bf2f674ab21edcb00eccde5
+      internalID: 1833936768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_37
+      rect:
+        serializedVersion: 2
+        x: 4449
+        y: 1155
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f3f0921602b5f40a88b96c0e10d998
+      internalID: -1552198576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_38
+      rect:
+        serializedVersion: 2
+        x: 4724
+        y: 1153
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12010b1e131b404386bf740c92bf542
+      internalID: 336745955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_39
+      rect:
+        serializedVersion: 2
+        x: 4737
+        y: 1153
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed52ae4ecae210147939630c73aee855
+      internalID: -382015162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_40
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 1153
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526ef8ab16e69c24c8f0d33fcbd2d2d3
+      internalID: 268707488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_41
+      rect:
+        serializedVersion: 2
+        x: 5018
+        y: 1156
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ff2ecd6a65c0f4e82c7dbf5d7e45eb
+      internalID: -691400381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_42
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 1153
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fdc1a2b0a55954495c1ce8086bfd0f
+      internalID: 531791063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_43
+      rect:
+        serializedVersion: 2
+        x: 5063
+        y: 1155
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf4c9abda0e38b4299894beb3d7fc1d
+      internalID: -1838330370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_44
+      rect:
+        serializedVersion: 2
+        x: 5298
+        y: 1155
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4c82aea9b5cd342bf4254395617495
+      internalID: -750841386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_45
+      rect:
+        serializedVersion: 2
+        x: 5309
+        y: 1153
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1340c6d48d52aa458664d61b985c89f
+      internalID: 224578546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_46
+      rect:
+        serializedVersion: 2
+        x: 5583
+        y: 1153
+        width: 71
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b2a1f58924c0d4b940059a6cb91a78
+      internalID: -941201153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_47
+      rect:
+        serializedVersion: 2
+        x: 5885
+        y: 1153
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122c9da8345a35b46bd375f92307d558
+      internalID: 77923474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1026
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9894476a1f59c5548b8614e0ff5b3f60
+      internalID: -763357341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_49
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1027
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1ab6d3bd9688c40aa730937e2201dd
+      internalID: 71970760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_50
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1027
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83d7993c16fdff4f9d9ee627a7dc816
+      internalID: -205989324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_51
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1026
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f35b5c477c212b4da67e6bb405c180f
+      internalID: 807418463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_52
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1026
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9cab6808aa2fb439001cb8fcd815a4
+      internalID: 1064462079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_53
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 1026
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cfabcdcb525ff4a8e6c8ffca8076ba
+      internalID: 214768820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_54
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1034
+        width: 53
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cf39e6ae229ac48974cbce13621d24
+      internalID: 1448369202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_55
+      rect:
+        serializedVersion: 2
+        x: 2148
+        y: 1032
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7105e0097d2f02d47bba49d63906670c
+      internalID: -1209363540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_56
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 897
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64ebf0bb9183314696c90cf4711336c
+      internalID: -1169023048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_57
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 897
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861ad84253d57454892045412fd3a872
+      internalID: 2005035839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_58
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 897
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce91c476bf88bd547b246a739cddaa6b
+      internalID: -811921227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_59
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 897
+        width: 48
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8be900ab1a5427499872171bee99671
+      internalID: -728824698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_60
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 897
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be26fc192dd1dd4f951fe42ac9de805
+      internalID: 2086448884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_61
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 897
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c2f0f720965e143bc8d2c9f1f71845
+      internalID: -1600680073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_62
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 897
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1a5e8d88049b146b0f8fd1670f67af
+      internalID: -1342704313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_63
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 897
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fcc5afa60913e42b57128682e0723d
+      internalID: 1341610409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_64
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 769
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88c393a592de474ea1c1fd937dabc4f
+      internalID: -2050251726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_65
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 769
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a00d8a6aaac4e14395ebd1c4c6957f3
+      internalID: 1150098966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_66
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 769
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18566f6c319575f41b9793ef4932c5a4
+      internalID: 841331679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_67
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 769
+        width: 67
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129b1332d7cc6474bafb334f80a96ae2
+      internalID: -1695412489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_68
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 769
+        width: 64
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1a4207f38e6f14487e65bdb7778ed4
+      internalID: -1654187307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_69
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 769
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b8d79ab2962b04e919439dfd3a8bbb
+      internalID: 1329648138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_70
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 783
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecdfd22b834674428ec50666ad578dd
+      internalID: 377389728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_71
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 769
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34712b76d7b3a29429b95bf6aa47ab27
+      internalID: 1489563626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_72
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 641
+        width: 50
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efa12b6e59246d4595e456cc2d783bb
+      internalID: -892575795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_73
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 641
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7251d42e17a058848a8b2a396d0211ba
+      internalID: 888605684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_74
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 641
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed18e2b4bb8e894c905743cb461c0c9
+      internalID: -766672916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_75
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 641
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ab39e6506240747a0179f4a9c8eed6
+      internalID: 957531744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_76
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 641
+        width: 45
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e29bb04922e444bbf82b0bddb8800c
+      internalID: -1656027024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_77
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 674
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb30658f2a7a36e43b2ea41506822ae8
+      internalID: -1651614878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_78
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 641
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80dd89220b0b6ae42aef45a9b37fdb64
+      internalID: 578465705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_79
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 671
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ae6f7de10790049910fa4e37ce792d
+      internalID: 1933235020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_80
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 641
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e8b8e45e5fa684eba78b0f4f13677a
+      internalID: -390975074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_81
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 513
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260a307b5788255469b86ac40fc854d8
+      internalID: -1678315999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_82
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 513
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdb521aebae75547b6285ec6a50966d
+      internalID: 1625775085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_83
+      rect:
+        serializedVersion: 2
+        x: 3081
+        y: 548
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec07413b85f50c468e80dca4a98cdfd
+      internalID: -688743568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_84
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 513
+        width: 71
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab704d10c539c245b035c6a02104e43
+      internalID: 1681408419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_85
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 561
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e79b71c7d406fd46906b7c31759fc76
+      internalID: 117895097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_86
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 513
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32488b078e0af914fa5e13c9011f7b14
+      internalID: 1284444492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_87
+      rect:
+        serializedVersion: 2
+        x: 3658
+        y: 513
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de781314dd65984e831d3f69b3bb9b0
+      internalID: 988617670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_88
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 513
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27434898f902d0c4cb7a047b06970aa7
+      internalID: 158732393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_89
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 513
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8a6e3730df1154c88cbbbaf008df0d
+      internalID: 763871477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_90
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 513
+        width: 67
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a599ed8c01c31684689c09dbe340915b
+      internalID: 1097057106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_91
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 513
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55685a278138314a813333c5db54b77
+      internalID: 1643951337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_92
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 513
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcd14ced331578428ad0883e4236a88
+      internalID: -1596385700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_93
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 513
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155cb309c359a47429dbc03091cb1c95
+      internalID: -351695190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_94
+      rect:
+        serializedVersion: 2
+        x: 2444
+        y: 513
+        width: 59
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67351e9b67f2b34eb64beedd5d8177b
+      internalID: -272535073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_95
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 513
+        width: 67
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16489aeaa4e5014d8de726455281f6d
+      internalID: 170920615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_96
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 513
+        width: 54
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81397dd752b7bb24c9e9b4fe6aa6a6ee
+      internalID: -1458689273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_97
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 513
+        width: 72
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2a62214c51ef6478a586312856098d
+      internalID: 981082668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_98
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 513
+        width: 54
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f855594eeb5bc24c858ff0130652566
+      internalID: -422305797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_99
+      rect:
+        serializedVersion: 2
+        x: 3078
+        y: 540
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2756b678c0df5cb4887fc979aaca114a
+      internalID: -1203524764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_100
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 513
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2c2d9e1761baa489d26af47d034983
+      internalID: -695477195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_101
+      rect:
+        serializedVersion: 2
+        x: 3596
+        y: 513
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cd56586d0b6744d9a7a3ef949908db
+      internalID: 1423030260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_102
+      rect:
+        serializedVersion: 2
+        x: 3884
+        y: 513
+        width: 68
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d1b876aa30543459faf8f309ac8836
+      internalID: -335300657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_103
+      rect:
+        serializedVersion: 2
+        x: 3956
+        y: 513
+        width: 70
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d79e6b8eeba2e74e8c3f96d210e80ad
+      internalID: -1673995020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_104
+      rect:
+        serializedVersion: 2
+        x: 4165
+        y: 513
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45962d0204ae3c640963cb15ac48c88e
+      internalID: -889776226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_105
+      rect:
+        serializedVersion: 2
+        x: 4236
+        y: 513
+        width: 77
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd231b00e4c52c4dadb85120d978655
+      internalID: -1817697270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_106
+      rect:
+        serializedVersion: 2
+        x: 4451
+        y: 513
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2097171da800cf419cd4ca6ac41d784
+      internalID: -1162587882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_107
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 513
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec461dbd0f7822f4e82c19dfcfa718a9
+      internalID: -228427076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_108
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 513
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f35995c456db8439fdcaadfbdaeb61
+      internalID: -644536591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_109
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 513
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031d414682b88f64db39970c7fcd85cd
+      internalID: 1959198838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_110
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 513
+        width: 38
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e96578ea1ba59b4687600f36608276f
+      internalID: -899972185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_111
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 513
+        width: 37
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00d1222619db794497b5bb5384ef4df
+      internalID: 57403475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_112
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 513
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f2e51d14293c7409f7ac54393a452a
+      internalID: 2083217924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_113
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 513
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3da0d68a3f1dc489eec37e84f12559
+      internalID: 1165469531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_114
+      rect:
+        serializedVersion: 2
+        x: 4544
+        y: 513
+        width: 37
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6598c69d6d8c2bf419266c90fe04959c
+      internalID: 2052038986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_115
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 436
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c0ed0f760c69945aec425ab0e370cf
+      internalID: 179543980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_116
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 416
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e85e5183e856745949cf8b2a23d815
+      internalID: -1701648651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_117
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 439
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36924599e7eef74e85d10cf50b97e31
+      internalID: 1349749973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_118
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 385
+        width: 49
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06238decf62d3d549b17a556aacd4c92
+      internalID: 1638971800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_119
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 385
+        width: 115
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333a786b90d69b74791735c6f2bc8fb3
+      internalID: 1853017458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_120
+      rect:
+        serializedVersion: 2
+        x: 2545
+        y: 446
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c4364b427af304a9a34b4c7d826d28
+      internalID: -1104551863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_121
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 451
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec380e5a44e73cc48bceb8a3ec136655
+      internalID: 753668932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_122
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 385
+        width: 117
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfd3c58c3952144abca2a6d7505a259
+      internalID: 1555371664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_123
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 385
+        width: 114
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f5f8de1af0b0d47858afe1a968edf5
+      internalID: -1973208703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_124
+      rect:
+        serializedVersion: 2
+        x: 3337
+        y: 385
+        width: 114
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b6a10fe6ad9ab4581c75c6a3fa81bd
+      internalID: -118438901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_125
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 414
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b28ce50d6d1fd345b9a046612d6ea62
+      internalID: 1905958590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_126
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 385
+        width: 68
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0a6ac90ff74514ca58f430ff42f551
+      internalID: -943935520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_127
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 435
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b12a5da2b38d944b84b2ca5b3f00d2
+      internalID: 1645471693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_128
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 385
+        width: 78
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f79f03e0d94bf4c932bfad63da5d1f
+      internalID: -1837498050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_129
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 385
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8d74fe12c947f4ea4f6c26bd033835
+      internalID: 1735289316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_130
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 422
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaddcadfc7b4a9489f5a581d7242529
+      internalID: 60822005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_131
+      rect:
+        serializedVersion: 2
+        x: 2723
+        y: 385
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc45ab5048b2764e9636a623cdffcf4
+      internalID: -360492834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_132
+      rect:
+        serializedVersion: 2
+        x: 3011
+        y: 385
+        width: 33
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e2d234ec64f5d4ab5469356b5a5c83
+      internalID: -653916607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_133
+      rect:
+        serializedVersion: 2
+        x: 3299
+        y: 385
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44049b84632e1f541a3f112a155d7006
+      internalID: 789694062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_134
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 385
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2632d869c68634598bcb0e8a21b77c
+      internalID: -254139493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_135
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 385
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1ad5e562162ff4fbc8f0286c27d69e
+      internalID: -1664853076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_136
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 385
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713cd8e7e67340f42b078a0142323a1f
+      internalID: 1676173875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_137
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 394
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f4d9265f6225f4eaa66bdeef4b4f81
+      internalID: -643621542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_138
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 385
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec3222237d960444b214044cebc3b59
+      internalID: 1143476281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_139
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 385
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad665e08c4b9df42a1af7d280c56aca
+      internalID: 1606046206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_140
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 385
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e1fe082a4615242aa7cf6fdd625169
+      internalID: -1790310299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_141
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 385
+        width: 90
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fce9665d49bb447901678af47ee1fb
+      internalID: 1193399112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_142
+      rect:
+        serializedVersion: 2
+        x: 3875
+        y: 385
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672b860b9d8fa9e44b8a341b9f7b727d
+      internalID: -2060092678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_143
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 385
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39c549ea6ec3a1439ff96cb13af9e37
+      internalID: -1543105614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_144
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 385
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff7a8c6bf9859c4fb57e3c94dd65abe
+      internalID: 2113271795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_145
+      rect:
+        serializedVersion: 2
+        x: 3963
+        y: 385
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a32a0a11a9a8f41b6a9c2ab3eb6813
+      internalID: 1644839720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_146
+      rect:
+        serializedVersion: 2
+        x: 3985
+        y: 385
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d498fbe63237d5e4ba44eedc373555b8
+      internalID: -545964890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_147
+      rect:
+        serializedVersion: 2
+        x: 4160
+        y: 385
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f67a9938a85ab488d633aaa5e525ff
+      internalID: -711018097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_148
+      rect:
+        serializedVersion: 2
+        x: 3976
+        y: 385
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8915e5ec365d708498089cbc10f2d0c9
+      internalID: 92442911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_149
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 385
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8af9773db837647abbdf4069c4c811
+      internalID: 419327912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_150
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 257
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5e8de8c3a14eb42aa774adf3c8383e
+      internalID: 418504936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_151
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 257
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d13c5f38649e447b6f3ab8e73e0b75
+      internalID: -821085822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_152
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 257
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ea9cc21586f0c4385a6eda03e9d808
+      internalID: 1110837327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_153
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 257
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c38d4ae87062bb489fe8cfd328482e3
+      internalID: -1139396944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_154
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 257
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d734484774008f346a9775994da2c5c1
+      internalID: 1814103796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_155
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 257
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763549eb4cad29843afaf8db9431572c
+      internalID: 276622425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_156
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 257
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261987cfe2e42514f80ab1e8abe240b6
+      internalID: 1757964533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_157
+      rect:
+        serializedVersion: 2
+        x: 2146
+        y: 257
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506062a59ad8bf941a316f62599c0418
+      internalID: 1989190336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_158
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 257
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f81e9c3fb2832b49bb6c91d8ae90121
+      internalID: -1749639637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_159
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 129
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090bb5a2fcb7d2142817155b51868fab
+      internalID: -1826725560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_160
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 129
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1778f9843199bda4da0a46e3ff9ff083
+      internalID: 939750080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_161
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 129
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86610fae39bbd304aa066ea6c8dd7cee
+      internalID: -1291497283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_162
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 129
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a98c258a811a44e9e10756951d0267
+      internalID: 1903280787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_163
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 129
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb98aa736e0334187cef1d3a489d85
+      internalID: 1524404866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_164
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 129
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41db50d533262f40ad0f0c4de51b43c
+      internalID: -567852175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_165
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90ae4964941e094688b73cf9517308e
+      internalID: -403828710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_166
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687707ae6a29f8c4b81500c0b74dad73
+      internalID: -329633252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_167
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fde565dd43ebfc4daac241b0f3f34ed
+      internalID: -768419375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_168
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67a329cc5ca335489c0784a19e0b686
+      internalID: 1497134718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_169
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63e2a2ec9d4e30429f2199cb09aa7d6
+      internalID: 810586022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_170
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7636818d019942e4ba7e5cbada8a204d
+      internalID: 1263321881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_171
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b219fe5fddb9c584a941628d0bef85f3
+      internalID: 686674592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_172
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb7601d7a2174a4b9727e892654ab8d
+      internalID: -1569123227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_173
+      rect:
+        serializedVersion: 2
+        x: 2438
+        y: 1
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32600b7293d4a4342b4879f4802701df
+      internalID: 974153420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_174
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 1
+        width: 44
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22e1ab19218c4f4eb1ab30896d6be47
+      internalID: -1792573558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_175
+      rect:
+        serializedVersion: 2
+        x: 3013
+        y: 1
+        width: 54
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826f8aab8754b1748bf09e10421ba2d9
+      internalID: 1164538956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_176
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 1
+        width: 49
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b1dd9e2ea5af947ba8c88eacd79923
+      internalID: -1695454629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_177
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 3
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05871e599064ebb4e805155351503194
+      internalID: 1358360922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_178
+      rect:
+        serializedVersion: 2
+        x: 3587
+        y: 1
+        width: 61
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757f06588137d8349be2d1b293a02666
+      internalID: -432284497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_179
+      rect:
+        serializedVersion: 2
+        x: 3872
+        y: 1
+        width: 71
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fff23c1312d74042bfae0426f2ea6bb
+      internalID: -1907796514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerSpriteSheetRight_180
+      rect:
+        serializedVersion: 2
+        x: 4166
+        y: 1
+        width: 44
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063bf44a161ad95428b08653ec022eae
+      internalID: 1338247693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerSpriteSheetRight_0: -724162585
+      PlayerSpriteSheetRight_1: 40975968
+      PlayerSpriteSheetRight_10: -31058208
+      PlayerSpriteSheetRight_100: -695477195
+      PlayerSpriteSheetRight_101: 1423030260
+      PlayerSpriteSheetRight_102: -335300657
+      PlayerSpriteSheetRight_103: -1673995020
+      PlayerSpriteSheetRight_104: -889776226
+      PlayerSpriteSheetRight_105: -1817697270
+      PlayerSpriteSheetRight_106: -1162587882
+      PlayerSpriteSheetRight_107: -228427076
+      PlayerSpriteSheetRight_108: -644536591
+      PlayerSpriteSheetRight_109: 1959198838
+      PlayerSpriteSheetRight_11: -1499403628
+      PlayerSpriteSheetRight_110: -899972185
+      PlayerSpriteSheetRight_111: 57403475
+      PlayerSpriteSheetRight_112: 2083217924
+      PlayerSpriteSheetRight_113: 1165469531
+      PlayerSpriteSheetRight_114: 2052038986
+      PlayerSpriteSheetRight_115: 179543980
+      PlayerSpriteSheetRight_116: -1701648651
+      PlayerSpriteSheetRight_117: 1349749973
+      PlayerSpriteSheetRight_118: 1638971800
+      PlayerSpriteSheetRight_119: 1853017458
+      PlayerSpriteSheetRight_12: -456272392
+      PlayerSpriteSheetRight_120: -1104551863
+      PlayerSpriteSheetRight_121: 753668932
+      PlayerSpriteSheetRight_122: 1555371664
+      PlayerSpriteSheetRight_123: -1973208703
+      PlayerSpriteSheetRight_124: -118438901
+      PlayerSpriteSheetRight_125: 1905958590
+      PlayerSpriteSheetRight_126: -943935520
+      PlayerSpriteSheetRight_127: 1645471693
+      PlayerSpriteSheetRight_128: -1837498050
+      PlayerSpriteSheetRight_129: 1735289316
+      PlayerSpriteSheetRight_13: 921012802
+      PlayerSpriteSheetRight_130: 60822005
+      PlayerSpriteSheetRight_131: -360492834
+      PlayerSpriteSheetRight_132: -653916607
+      PlayerSpriteSheetRight_133: 789694062
+      PlayerSpriteSheetRight_134: -254139493
+      PlayerSpriteSheetRight_135: -1664853076
+      PlayerSpriteSheetRight_136: 1676173875
+      PlayerSpriteSheetRight_137: -643621542
+      PlayerSpriteSheetRight_138: 1143476281
+      PlayerSpriteSheetRight_139: 1606046206
+      PlayerSpriteSheetRight_14: -1186339678
+      PlayerSpriteSheetRight_140: -1790310299
+      PlayerSpriteSheetRight_141: 1193399112
+      PlayerSpriteSheetRight_142: -2060092678
+      PlayerSpriteSheetRight_143: -1543105614
+      PlayerSpriteSheetRight_144: 2113271795
+      PlayerSpriteSheetRight_145: 1644839720
+      PlayerSpriteSheetRight_146: -545964890
+      PlayerSpriteSheetRight_147: -711018097
+      PlayerSpriteSheetRight_148: 92442911
+      PlayerSpriteSheetRight_149: 419327912
+      PlayerSpriteSheetRight_15: -2058739481
+      PlayerSpriteSheetRight_150: 418504936
+      PlayerSpriteSheetRight_151: -821085822
+      PlayerSpriteSheetRight_152: 1110837327
+      PlayerSpriteSheetRight_153: -1139396944
+      PlayerSpriteSheetRight_154: 1814103796
+      PlayerSpriteSheetRight_155: 276622425
+      PlayerSpriteSheetRight_156: 1757964533
+      PlayerSpriteSheetRight_157: 1989190336
+      PlayerSpriteSheetRight_158: -1749639637
+      PlayerSpriteSheetRight_159: -1826725560
+      PlayerSpriteSheetRight_16: -437123390
+      PlayerSpriteSheetRight_160: 939750080
+      PlayerSpriteSheetRight_161: -1291497283
+      PlayerSpriteSheetRight_162: 1903280787
+      PlayerSpriteSheetRight_163: 1524404866
+      PlayerSpriteSheetRight_164: -567852175
+      PlayerSpriteSheetRight_165: -403828710
+      PlayerSpriteSheetRight_166: -329633252
+      PlayerSpriteSheetRight_167: -768419375
+      PlayerSpriteSheetRight_168: 1497134718
+      PlayerSpriteSheetRight_169: 810586022
+      PlayerSpriteSheetRight_17: -1775354381
+      PlayerSpriteSheetRight_170: 1263321881
+      PlayerSpriteSheetRight_171: 686674592
+      PlayerSpriteSheetRight_172: -1569123227
+      PlayerSpriteSheetRight_173: 974153420
+      PlayerSpriteSheetRight_174: -1792573558
+      PlayerSpriteSheetRight_175: 1164538956
+      PlayerSpriteSheetRight_176: -1695454629
+      PlayerSpriteSheetRight_177: 1358360922
+      PlayerSpriteSheetRight_178: -432284497
+      PlayerSpriteSheetRight_179: -1907796514
+      PlayerSpriteSheetRight_18: -2126730448
+      PlayerSpriteSheetRight_180: 1338247693
+      PlayerSpriteSheetRight_19: -854517823
+      PlayerSpriteSheetRight_2: -1691334423
+      PlayerSpriteSheetRight_20: -677291013
+      PlayerSpriteSheetRight_21: 1956333112
+      PlayerSpriteSheetRight_22: -311720976
+      PlayerSpriteSheetRight_23: -1660907336
+      PlayerSpriteSheetRight_24: 699984949
+      PlayerSpriteSheetRight_25: 1201935575
+      PlayerSpriteSheetRight_26: -1150351321
+      PlayerSpriteSheetRight_27: 775182113
+      PlayerSpriteSheetRight_28: -852087998
+      PlayerSpriteSheetRight_29: -395538236
+      PlayerSpriteSheetRight_3: -1671466060
+      PlayerSpriteSheetRight_30: 1231625075
+      PlayerSpriteSheetRight_31: 328602025
+      PlayerSpriteSheetRight_32: -655131275
+      PlayerSpriteSheetRight_33: -32624036
+      PlayerSpriteSheetRight_34: -963145631
+      PlayerSpriteSheetRight_35: 2060678834
+      PlayerSpriteSheetRight_36: 1833936768
+      PlayerSpriteSheetRight_37: -1552198576
+      PlayerSpriteSheetRight_38: 336745955
+      PlayerSpriteSheetRight_39: -382015162
+      PlayerSpriteSheetRight_4: 1044153442
+      PlayerSpriteSheetRight_40: 268707488
+      PlayerSpriteSheetRight_41: -691400381
+      PlayerSpriteSheetRight_42: 531791063
+      PlayerSpriteSheetRight_43: -1838330370
+      PlayerSpriteSheetRight_44: -750841386
+      PlayerSpriteSheetRight_45: 224578546
+      PlayerSpriteSheetRight_46: -941201153
+      PlayerSpriteSheetRight_47: 77923474
+      PlayerSpriteSheetRight_48: -763357341
+      PlayerSpriteSheetRight_49: 71970760
+      PlayerSpriteSheetRight_5: -1229086888
+      PlayerSpriteSheetRight_50: -205989324
+      PlayerSpriteSheetRight_51: 807418463
+      PlayerSpriteSheetRight_52: 1064462079
+      PlayerSpriteSheetRight_53: 214768820
+      PlayerSpriteSheetRight_54: 1448369202
+      PlayerSpriteSheetRight_55: -1209363540
+      PlayerSpriteSheetRight_56: -1169023048
+      PlayerSpriteSheetRight_57: 2005035839
+      PlayerSpriteSheetRight_58: -811921227
+      PlayerSpriteSheetRight_59: -728824698
+      PlayerSpriteSheetRight_6: 1477840134
+      PlayerSpriteSheetRight_60: 2086448884
+      PlayerSpriteSheetRight_61: -1600680073
+      PlayerSpriteSheetRight_62: -1342704313
+      PlayerSpriteSheetRight_63: 1341610409
+      PlayerSpriteSheetRight_64: -2050251726
+      PlayerSpriteSheetRight_65: 1150098966
+      PlayerSpriteSheetRight_66: 841331679
+      PlayerSpriteSheetRight_67: -1695412489
+      PlayerSpriteSheetRight_68: -1654187307
+      PlayerSpriteSheetRight_69: 1329648138
+      PlayerSpriteSheetRight_7: 570944244
+      PlayerSpriteSheetRight_70: 377389728
+      PlayerSpriteSheetRight_71: 1489563626
+      PlayerSpriteSheetRight_72: -892575795
+      PlayerSpriteSheetRight_73: 888605684
+      PlayerSpriteSheetRight_74: -766672916
+      PlayerSpriteSheetRight_75: 957531744
+      PlayerSpriteSheetRight_76: -1656027024
+      PlayerSpriteSheetRight_77: -1651614878
+      PlayerSpriteSheetRight_78: 578465705
+      PlayerSpriteSheetRight_79: 1933235020
+      PlayerSpriteSheetRight_8: 1634165977
+      PlayerSpriteSheetRight_80: -390975074
+      PlayerSpriteSheetRight_81: -1678315999
+      PlayerSpriteSheetRight_82: 1625775085
+      PlayerSpriteSheetRight_83: -688743568
+      PlayerSpriteSheetRight_84: 1681408419
+      PlayerSpriteSheetRight_85: 117895097
+      PlayerSpriteSheetRight_86: 1284444492
+      PlayerSpriteSheetRight_87: 988617670
+      PlayerSpriteSheetRight_88: 158732393
+      PlayerSpriteSheetRight_89: 763871477
+      PlayerSpriteSheetRight_9: 150416014
+      PlayerSpriteSheetRight_90: 1097057106
+      PlayerSpriteSheetRight_91: 1643951337
+      PlayerSpriteSheetRight_92: -1596385700
+      PlayerSpriteSheetRight_93: -351695190
+      PlayerSpriteSheetRight_94: -272535073
+      PlayerSpriteSheetRight_95: 170920615
+      PlayerSpriteSheetRight_96: -1458689273
+      PlayerSpriteSheetRight_97: 981082668
+      PlayerSpriteSheetRight_98: -422305797
+      PlayerSpriteSheetRight_99: -1203524764
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
