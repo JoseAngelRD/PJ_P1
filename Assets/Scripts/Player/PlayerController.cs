@@ -9,6 +9,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2D;
     private Vector2 movimiento;
     private Animator animator;
+
+    // Variables de salto
+    public bool onGround = false;
+
+    // Variables de combate
     private bool atacando = false;    
     [SerializeField] List<GameObject> hitsAtaques;
     [SerializeField] private float attackDamage;
@@ -44,8 +49,7 @@ public class PlayerController : MonoBehaviour
         movimiento.x = Input.GetAxisRaw("Horizontal");
         movimiento = movimiento.normalized;
                 
-        animator.SetFloat("Horizontal", movimiento.x);
-        animator.SetFloat("Vertical", movimiento.y);
+        animator.SetFloat("Horizontal", movimiento.x);        
         animator.SetFloat("Speed", movimiento.magnitude);
 
         /*if (Input.GetMouseButtonDown(0)) {            
@@ -61,6 +65,11 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetInteger("Direccion", 1);
         }
+
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && onGround)
+        {            
+            rb2D.AddForce(new Vector2(0, 1)*500);
+        }
     }
 
     void FixedUpdate()
@@ -70,6 +79,24 @@ public class PlayerController : MonoBehaviour
             return;
         }
         rb2D.velocity = movimiento * velocidad;
+    }    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Suelo") && !onGround)
+        {
+            onGround = true;
+            animator.SetTrigger("OnGround");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Suelo"))
+        {
+            onGround = false;
+            animator.SetTrigger("Jump");
+        }
     }
 
     public void EndAttack()
