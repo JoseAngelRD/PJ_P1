@@ -47,13 +47,13 @@ public class PlayerController : MonoBehaviour
         {
             movimiento = Vector2.zero;
             return;
-        }
+        }*/
         if (atacando)
         {
-            movimiento = Vector2.zero;
-            hitsAtaques[animator.GetInteger("Direccion")].SetActive(true);
+            if (onGround) movimiento = Vector2.zero;
+            hitsAtaques[0].SetActive(true);
             return;
-        }*/
+        }
         
         movimiento.x = Input.GetAxisRaw("Horizontal");
         movimiento = movimiento.normalized;
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     public void EndAttack()
     {
-        hitsAtaques[animator.GetInteger("Direccion")].SetActive(false);
+        hitsAtaques[0].SetActive(false);
         atacando = false;        
     }
 
