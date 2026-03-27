@@ -43,11 +43,11 @@ public class PlayerController : MonoBehaviour
         if (colisionDown != false && colisionDown.collider.CompareTag("Suelo")) onGround = true;
         else onGround = false;
 
-        /*if (daniado)
+        if (daniado)
         {
             movimiento = Vector2.zero;
             return;
-        }*/
+        }
         if (atacando)
         {            
             if (onGround) movimiento = Vector2.zero;
