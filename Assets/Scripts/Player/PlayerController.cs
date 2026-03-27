@@ -49,9 +49,13 @@ public class PlayerController : MonoBehaviour
             return;
         }*/
         if (atacando)
-        {
+        {            
             if (onGround) movimiento = Vector2.zero;
-            hitsAtaques[0].SetActive(true);
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                Debug.Log("Cancelado el ataque");
+                EndAttack();
+            }         
             return;
         }
         
@@ -107,9 +111,17 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("OnGround");
     }
 
+    public void ActivarHit(int index)
+    {
+        hitsAtaques[index].SetActive(true);
+    }
+
     public void EndAttack()
     {
-        hitsAtaques[0].SetActive(false);
+        foreach (GameObject h in hitsAtaques)
+        {
+            h.SetActive(false);
+        }        
         atacando = false;        
     }
 
