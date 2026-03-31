@@ -8,25 +8,39 @@ using TMPro;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    public Button botonJugar;
-    public Button botonOpciones;
-    public Button botonSalir;
-
-    public GameObject canvasOpciones;
-    private bool toggleOpciones = false;
-    public Button volverOpc;
-    public Slider volumen;
-    public TMP_Dropdown dropdownResolucion;
-    public TMP_Dropdown dropdownPantalla;
-
+    // Jugar
+    [SerializeField] private Button botonJugar;
+    [SerializeField] private GameObject canvasJugar;
+    private bool toggleJugar = false;
+    [SerializeField] private Button volverJugar;
+    [SerializeField] private Button botonKnight;
+    [SerializeField] private Button botonNieve;
+    [SerializeField] private Button botonMinotauro;
+    
+    // Opciones
+    [SerializeField] private Button botonOpciones;
+    [SerializeField] private GameObject canvasOpciones;
+    [SerializeField] private bool toggleOpciones = false;
+    [SerializeField] private Button volverOpc;
+    [SerializeField] private Slider volumen;
+    [SerializeField] private TMP_Dropdown dropdownResolucion;
+    [SerializeField] private TMP_Dropdown dropdownPantalla;
     private Resolution[] resoluciones;
+
+    // Salir
+    [SerializeField] private Button botonSalir;    
 
     // Start is called before the first frame update
     void Start()
     {
-        botonJugar.onClick.AddListener(() => Jugar());
+        botonJugar.onClick.AddListener(() => ToggleJugar());
+        volverJugar.onClick.AddListener(() => ToggleJugar());
+        botonKnight.onClick.AddListener(() => CargarKnight());
+        botonMinotauro.onClick.AddListener(() => CargarMinotauro());
+        botonNieve.onClick.AddListener(() => CargarNieve());
+
         botonOpciones.onClick.AddListener(() => ToggleOpciones());
-        volverOpc.onClick.AddListener(() => ToggleOpciones());
+        volverOpc.onClick.AddListener(() => ToggleOpciones());        
         volumen.onValueChanged.AddListener(delegate { Volumen(); });
 
         botonSalir.onClick.AddListener(() => Salir());
@@ -35,9 +49,25 @@ public class MenuPrincipal : MonoBehaviour
         ConfigurarModoPantalla();
     }
 
-    private void Jugar()
+    private void ToggleJugar()
+    {
+        toggleJugar = !toggleJugar;
+        canvasJugar.SetActive(toggleJugar);
+    }
+
+    private void CargarKnight()
     {
         SceneManager.LoadScene(1);
+    }
+
+    private void CargarMinotauro()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    private void CargarNieve()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void Salir()
