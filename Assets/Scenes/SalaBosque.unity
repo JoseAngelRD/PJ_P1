@@ -189,8 +189,7 @@ MonoBehaviour:
   - {fileID: 978266562}
   - {fileID: 1871408872}
   player: {fileID: 840280859}
-  limiteIzq: 0
-  limiteDer: 0
+  velocidad: 0.001
 --- !u!1 &276699421
 GameObject:
   m_ObjectHideFlags: 0

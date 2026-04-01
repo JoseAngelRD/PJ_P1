@@ -8,8 +8,7 @@ public class Paralaje : MonoBehaviour
     [SerializeField] private GameObject player;
     private Rigidbody2D rbPlayer;
 
-    [SerializeField] private float limiteIzq;
-    [SerializeField] private float limiteDer;
+    [SerializeField] private float velocidad;
 
     void Start()
     {
@@ -31,7 +30,7 @@ public class Paralaje : MonoBehaviour
 
         foreach (GameObject c in capas)
         {
-            c.transform.Translate(new Vector3((capas.Count-c.GetComponent<SpriteRenderer>().sortingOrder)*0.001f*direccion, 0, 0));
+            c.transform.Translate(new Vector3((capas.Count-c.GetComponent<SpriteRenderer>().sortingOrder)*velocidad*direccion, 0, 0));
         }
     }
 }
