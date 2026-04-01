@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidad = 5.0f;
     [SerializeField] private float jumpForce = 150f;
     private Rigidbody2D rb2D;
-    private Vector2 movimiento;
+    public Vector2 movimiento;
     private Animator animator;
 
     // Variables de salto
