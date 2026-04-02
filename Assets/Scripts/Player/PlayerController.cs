@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 5.0f;
     [SerializeField] private float jumpForce = 150f;
+    [SerializeField] private float tamRaycast = 0.4f;
     private Rigidbody2D rb2D;
     public Vector2 movimiento;
     private Animator animator;
@@ -38,8 +39,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Estado del player
-        Debug.DrawRay(transform.position, Vector3.down * 0.4f, Color.red);
-        RaycastHit2D colisionDown = Physics2D.Raycast(transform.position, Vector3.down, 0.4f, groundLayer);
+        Debug.DrawRay(transform.position, Vector3.down * tamRaycast, Color.red);
+        RaycastHit2D colisionDown = Physics2D.Raycast(transform.position, Vector3.down, tamRaycast, groundLayer);
         if (colisionDown != false && colisionDown.collider.CompareTag("Suelo")) onGround = true;
         else onGround = false;
 
