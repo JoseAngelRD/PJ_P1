@@ -7,7 +7,6 @@ using UnityEngine;
 public class NieveController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 5.0f;
-    [SerializeField] private float jumpForce = 150f;
     private Rigidbody2D rb2D;
     private Vector2 movimiento;
     private Animator animator;
@@ -89,12 +88,16 @@ public class NieveController : MonoBehaviour
         hitsAtaques[index].SetActive(true);
     }
 
-    public void EndAttack()
+    public void EndHit()
     {
         foreach (GameObject h in hitsAtaques)
         {
             h.SetActive(false);
         }
+    }
+
+    public void EndAttack()
+    {
         atacando = false;
     }
 }
