@@ -31,6 +31,10 @@ AnimationClip:
     - time: 0.33333334
       value: {fileID: -1302079855, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
     - time: 0.41666666
+      value: {fileID: -1302079855, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
+    - time: 0.5
+      value: {fileID: -1488166026, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
+    - time: 0.5833333
       value: {fileID: -1488166026, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
     attribute: m_Sprite
     path: 
@@ -59,13 +63,15 @@ AnimationClip:
     - {fileID: -1628543273, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
     - {fileID: 1454997582, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
     - {fileID: -1302079855, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
+    - {fileID: -1302079855, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
+    - {fileID: -1488166026, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
     - {fileID: -1488166026, guid: 3b082950b4d4a494b837b513f2cd3094, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -85,7 +91,28 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.41666666
+  - time: 0.33333334
+    functionName: ActivarHit
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 585fbc144b8f20e429fda8cef4dbefb7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: EndHit
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 585fbc144b8f20e429fda8cef4dbefb7, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: ActivarHit
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 585fbc144b8f20e429fda8cef4dbefb7, type: 3}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 0.5833333
     functionName: EndAttack
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 585fbc144b8f20e429fda8cef4dbefb7, type: 3}

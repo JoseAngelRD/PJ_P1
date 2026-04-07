@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerController : CharacterController
+public class SamuraiController : CharacterController
 {    
     // Update is called once per frame
     void Update()
@@ -9,7 +9,7 @@ public class PlayerController : CharacterController
         // Estado del player
         Debug.DrawRay(transform.position, Vector3.down * tamRaycast, Color.red);
         RaycastHit2D colisionDown = Physics2D.Raycast(transform.position, Vector3.down, tamRaycast, groundLayer);
-        if (colisionDown != false && colisionDown.collider.CompareTag("Suelo")) onGround = true;
+        if (colisionDown != false) onGround = true;
         else onGround = false;
 
         if (daniado)
@@ -19,12 +19,7 @@ public class PlayerController : CharacterController
         }
         if (atacando)
         {            
-            if (onGround) movimiento = Vector2.zero;
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-            {
-                Debug.Log("Cancelado el ataque");
-                EndAttack();
-            }         
+            if (onGround) movimiento = Vector2.zero;                     
             return;
         }
         
@@ -37,19 +32,23 @@ public class PlayerController : CharacterController
         animator.SetFloat("Horizontal", movimiento.x);        
         animator.SetFloat("Speed", movimiento.magnitude);
 
-        if (Input.GetMouseButtonDown(0)) {            
+        if (Input.GetMouseButtonDown(0) && onGround) {            
             Atacar(0);           
         }
 
+        if (Input.GetMouseButtonDown(1) && onGround) {            
+            Atacar(1);           
+        }       
+
         if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && onGround && rb2D.velocity.y < 0.1f)
         {            
-            Saltar();        
+            Saltar();            
         }
     }
 
     void FixedUpdate()
     {        
-        if (isKnockback)
+        if (isKnockback || isDashing)
         {
             return;
         }
@@ -58,13 +57,20 @@ public class PlayerController : CharacterController
 
     protected override void Atacar(int id)
     {
-        switch (id)
+        switch(id)
         {
             case 0:
             {
                 Debug.Log("LeftClick");
-                animator.SetTrigger("Attack");
-                atacando = true;         
+                animator.SetTrigger("Attack1");
+                atacando = true; 
+            }
+            break;
+            case 1:
+            {
+                Debug.Log("RightClick");            
+                animator.SetTrigger("Attack2");                        
+                atacando = true; 
             }
             break;
         }

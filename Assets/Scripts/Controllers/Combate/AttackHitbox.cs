@@ -12,7 +12,7 @@ public class AttackHitbox : MonoBehaviour
         Debug.Log("StartAttack");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("TriggerEnter");
         if ((targetMask.value & (1 << other.gameObject.layer)) == 0)
@@ -23,6 +23,21 @@ public class AttackHitbox : MonoBehaviour
         if (dmg != null)
         {
             Debug.Log("Player encontrado");
+            dmg.RecibirDanio(damage, transform.position);
+        }
+    }*/
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(gameObject.name + " Golpeando a: " + other.name);
+
+        if (((1 << other.gameObject.layer) & targetMask) == 0)
+            return;
+
+        var dmg = other.GetComponentInParent<DamageReceiver>();
+
+        if (dmg != null)
+        {
             dmg.RecibirDanio(damage, transform.position);
         }
     }
