@@ -5,7 +5,8 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameM;    
+    public static GameManager gameM;
+    public bool isGameOver = false; 
 
     private void Awake()
     {
@@ -17,6 +18,6 @@ public class GameManager : MonoBehaviour
         else if (gameM != this)
         {
             Destroy(gameObject);
-        }        
+        }           
     }
 }

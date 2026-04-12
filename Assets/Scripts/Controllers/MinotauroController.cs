@@ -6,9 +6,12 @@ using UnityEngine;
 
 public class MinotauroController : CharacterController
 {
+    [SerializeField] private Transform player;
+    private int direccionHuida = 0;
     // Update is called once per frame
     void Update()
-    {
+    {        
+        Debug.Log(GetComponent<SpriteRenderer>().color);
         if (atacando)
         {
             movimiento = Vector2.zero;            
@@ -31,8 +34,24 @@ public class MinotauroController : CharacterController
     }
 
     void FixedUpdate()
-    {
-        rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
+    {   
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {            
+            if (direccionHuida == 0)
+            {
+                direccionHuida = Math.Sign(transform.position.x-player.position.x);
+                Debug.Log(direccionHuida);
+                if (direccionHuida == 0)
+                {
+                    direccionHuida = 1;
+                }
+            }
+            transform.localScale = new Vector3(Math.Abs(transform.localScale.x)*-direccionHuida, transform.localScale.y, transform.localScale.z);
+            rb2D.velocity = new Vector2(direccionHuida*10, 0);
+        } else
+        {
+            rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
+        }
     }
 
     protected override void Atacar(int id)
@@ -49,4 +68,3 @@ public class MinotauroController : CharacterController
         }
     }
 }
-

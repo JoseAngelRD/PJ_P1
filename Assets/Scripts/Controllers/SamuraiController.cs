@@ -37,8 +37,12 @@ public class SamuraiController : CharacterController
         }
 
         if (Input.GetMouseButtonDown(1) && onGround) {            
-            Atacar(1);           
-        }       
+            Atacar(1);
+        }     
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && onGround && !isDashing) {            
+            StartCoroutine(Dash());            
+        }   
 
         if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && onGround && rb2D.velocity.y < 0.1f)
         {            
@@ -76,4 +80,3 @@ public class SamuraiController : CharacterController
         }
     }
 }
-

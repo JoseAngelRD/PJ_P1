@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamageReceiver : DamageReceiver
+public class SamuraiDamageReceiver : DamageReceiver
 {
     Animator animator;
     Rigidbody2D rb;
@@ -17,25 +17,26 @@ public class PlayerDamageReceiver : DamageReceiver
     {
         animator.SetTrigger("Hurt");
 
-        Vector2 direccion = (transform.position - (Vector3)origen).normalized;
+        /*Vector2 direccion = (transform.position - (Vector3)origen).normalized;
         rb.velocity = Vector2.zero;
         rb.AddForce(direccion * 5f, ForceMode2D.Impulse);
-        StartCoroutine(KnockbackRoutine());
+        StartCoroutine(KnockbackRoutine());*/
 
-        GetComponentInParent<PlayerController>().daniado = true;
+        GetComponentInParent<CharacterController>().daniado = true;
     }
 
     IEnumerator KnockbackRoutine()
     {
-        GetComponentInParent<PlayerController>().isKnockback = true;
+        GetComponentInParent<CharacterController>().isKnockback = true;
 
         yield return new WaitForSeconds(0.2f);
-        rb.velocity = Vector2.zero;
-        GetComponentInParent<PlayerController>().isKnockback = false;
+
+        GetComponentInParent<CharacterController>().isKnockback = false;
     }
 
     protected override void Morir()
     {
         animator.SetTrigger("Death");
+        FindObjectOfType<Cronometro>().DetenerYComprobarRecord("Samurai");
     }
 }

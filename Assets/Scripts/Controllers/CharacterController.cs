@@ -17,12 +17,15 @@ public abstract class CharacterController : MonoBehaviour
     public bool onGround = false;
 
     // Variables de combate
-    protected bool atacando = false;
+    [SerializeField] protected bool atacando = false;
     protected bool isDashing = false;
     [SerializeField] List<GameObject> hitsAtaques;
     [SerializeField] protected float attackDamage;
     public bool daniado = false;
     public bool isKnockback = false;
+    [SerializeField] protected bool shield = false;  
+
+    [SerializeField] protected GameObject menuMuerte = null;  
 
     // Start is called before the first frame update
     protected void Start()
@@ -54,10 +57,14 @@ public abstract class CharacterController : MonoBehaviour
         StartCoroutine(Aterrizaje());
     }
 
-    public void Dash()
+    public IEnumerator Dash()
     {
         rb2D.AddForce(Vector2.right*transform.localScale.x*dashForce, ForceMode2D.Impulse);
         isDashing = true;
+
+        yield return new WaitForSeconds(0.2f);
+        rb2D.velocity = Vector2.zero;
+        isDashing = false;
     }
 
     public void ActivarHit(int index)
@@ -87,7 +94,15 @@ public abstract class CharacterController : MonoBehaviour
     {
         daniado = false;
     }
+
+    private void ActivarMenuMuerte()
+    {
+        GameManager.gameM.isGameOver = true;
+        if (menuMuerte != null)
+        {
+            menuMuerte.SetActive(true);
+        }
+    }
     
     protected abstract void Atacar(int id);
 }
-

@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
-    [SerializeField] protected float vida = 5;
+    protected float vida;
+    [SerializeField] protected float vidaMaxima = 100;
+
+    [SerializeField] protected RectTransform vidaUI = null;    
+
+    void Awake()
+    {
+        vida = vidaMaxima;
+    }
 
     public virtual void RecibirDanio(float cantidad, Vector2 origen)
     {
-        vida -= cantidad;
-
-        Debug.Log(gameObject.name + " vida: " + vida);
-
-        if (vida <= 0)
+        if (vida > 0)
         {
-            Morir();
-        }
-        else
-        {
-            ReaccionAlDanio(origen);
+            vida -= cantidad;
+            vidaUI.localScale = new Vector3(vida / vidaMaxima, vidaUI.localScale.y, vidaUI.localScale.z);
+        
+            Debug.Log(gameObject.name + " vida: " + vida);
+
+            if (vida <= 0)
+            {
+                Morir();
+            }
+            else
+            {
+                ReaccionAlDanio(origen);
+            }
         }
     }
 
