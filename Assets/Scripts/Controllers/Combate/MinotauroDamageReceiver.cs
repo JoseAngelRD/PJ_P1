@@ -26,5 +26,6 @@ public class MinotauroDamageReceiver : DamageReceiver
     protected override void Morir()
     {
         animator.SetTrigger("Death");
+        FindObjectOfType<Cronometro>().DetenerYComprobarRecord("Minotauro");
     }
 }

@@ -13,10 +13,10 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private GameObject canvasJugar;
     private bool toggleJugar = false;
     [SerializeField] private Button volverJugar;
-    [SerializeField] private Button botonKnight;
+    [SerializeField] private Button botonSamurai;
     [SerializeField] private Button botonNieve;
     [SerializeField] private Button botonMinotauro;
-    
+
     // Opciones
     [SerializeField] private Button botonOpciones;
     [SerializeField] private GameObject canvasOpciones;
@@ -27,21 +27,33 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private TMP_Dropdown dropdownPantalla;
     private Resolution[] resoluciones;
 
+    //Ranking
+    [SerializeField] private Button botonRanking;
+    [SerializeField] private GameObject canvasRanking;
+    [SerializeField] private bool toggleRanking = false;
+    [SerializeField] private Button volverRanking;
+    [SerializeField] private TextMeshProUGUI textoRecordSamurai;
+    [SerializeField] private TextMeshProUGUI textoRecordMinotauro;
+    [SerializeField] private TextMeshProUGUI textoRecordNieve;
+
     // Salir
-    [SerializeField] private Button botonSalir;    
+    [SerializeField] private Button botonSalir;
 
     // Start is called before the first frame update
     void Start()
     {
         botonJugar.onClick.AddListener(() => ToggleJugar());
         volverJugar.onClick.AddListener(() => ToggleJugar());
-        botonKnight.onClick.AddListener(() => CargarKnight());
+        botonSamurai.onClick.AddListener(() => CargarSamurai());
         botonMinotauro.onClick.AddListener(() => CargarMinotauro());
         botonNieve.onClick.AddListener(() => CargarNieve());
 
         botonOpciones.onClick.AddListener(() => ToggleOpciones());
-        volverOpc.onClick.AddListener(() => ToggleOpciones());        
+        volverOpc.onClick.AddListener(() => ToggleOpciones());
         volumen.onValueChanged.AddListener(delegate { Volumen(); });
+
+        botonRanking.onClick.AddListener(() => ToggleRanking());
+        volverRanking.onClick.AddListener(() => ToggleRanking());
 
         botonSalir.onClick.AddListener(() => Salir());
 
@@ -55,7 +67,7 @@ public class MenuPrincipal : MonoBehaviour
         canvasJugar.SetActive(toggleJugar);
     }
 
-    private void CargarKnight()
+    private void CargarSamurai()
     {
         SceneManager.LoadScene(1);
     }
@@ -136,5 +148,49 @@ public class MenuPrincipal : MonoBehaviour
             case 1: Screen.fullScreenMode = FullScreenMode.FullScreenWindow; break;
             case 2: Screen.fullScreenMode = FullScreenMode.Windowed; break;
         }
+    }
+
+    private void ToggleRanking()
+    {
+        toggleRanking = !toggleRanking;
+        canvasRanking.SetActive(toggleRanking);
+
+        if (toggleRanking)
+        {
+            ActualizarTextosRanking();
+        }
+    }
+
+    private void ActualizarTextosRanking()
+    {
+        // Pasamos el nombre EXACTO que usamos al guardar el récord ("Samurai", "Minotauro", "Nieve")
+        textoRecordSamurai.text = ObtenerTextoRecord("Samurai");
+        textoRecordMinotauro.text = ObtenerTextoRecord("Minotauro");
+        textoRecordNieve.text = ObtenerTextoRecord("Nieve");
+    }
+
+    private string ObtenerTextoRecord(string nombreBoss)
+    {
+        string clave = "Record_" + nombreBoss;
+
+        // Comprobamos si existe un tiempo guardado
+        if (PlayerPrefs.HasKey(clave))
+        {
+            float tiempo = PlayerPrefs.GetFloat(clave);
+            return FormatearTiempo(tiempo);
+        }
+        else
+        {
+            // Si nunca se ha matado a ese boss, mostramos guiones
+            return "--:--:--";
+        }
+    }
+
+    private string FormatearTiempo(float tiempo)
+    {
+        int minutos = Mathf.FloorToInt(tiempo / 60);
+        int segundos = Mathf.FloorToInt(tiempo % 60);
+        int milisegundos = Mathf.FloorToInt((tiempo * 100) % 100);
+        return string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
     }
 }
