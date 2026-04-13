@@ -28,8 +28,10 @@ public class MenuPausa : MonoBehaviour
         {
             Debug.Log("PAUSE");
             ToggleMenu();
-            Pausar();
+            TogglePausar();
             menuOpciones.SetActive(false);
+            
+            GameManager.gameM.TogglePause();
         }
     }
 
@@ -39,20 +41,28 @@ public class MenuPausa : MonoBehaviour
         menu.SetActive(menuActivo);
     }
 
+    private void TogglePausar()
+    {        
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        } else
+        {
+            Time.timeScale = 0;
+        }        
+    }
+
     private void Reanudar()
     {
         ToggleMenu();
         Time.timeScale = 1;
-    }
-
-    private void Pausar()
-    {
-        Time.timeScale = 0;
+        GameManager.gameM.TogglePause();
     }
 
     private void MenuPrincipal()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+        GameManager.gameM.CambiarCancion(0);
     }
 }

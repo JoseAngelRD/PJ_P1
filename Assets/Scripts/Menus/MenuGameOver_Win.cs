@@ -20,12 +20,14 @@ public class MenuGameOver : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         GameManager.gameM.isGameOver = false;
+        GameManager.gameM.ReiniciarCancion();
     }
 
     private void MenuPrincipal()
     {
         Time.timeScale = 1;
         GameManager.gameM.isGameOver = false;
-        SceneManager.LoadScene(0);        
+        SceneManager.LoadScene(0);
+        GameManager.gameM.CambiarCancion(0);     
     }
 }

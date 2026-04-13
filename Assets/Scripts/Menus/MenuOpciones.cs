@@ -24,7 +24,7 @@ public class MenuOpciones : MonoBehaviour
 
     private void Volumen()
     {
-        GameManager.gameM.GetComponent<AudioSource>().volume = volumen.value;
+        GameManager.gameM.music.volume = volumen.value;
     }
 
     private void ConfigurarResolucion()
