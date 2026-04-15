@@ -32,11 +32,11 @@ public class PlayerController : CharacterController
 
         // Comprobar si se esta protegiendo
         if (Input.GetMouseButton(1)) {
-            animator.SetBool("Shield", true);
+            //animator.SetBool("Shield", true);
             shield = true;      
         } else
         {
-            animator.SetBool("Shield", false);
+            //animator.SetBool("Shield", false);
             shield = false;
         }
         // Cancelar el movimiento si se esta protegiendo en el suelo

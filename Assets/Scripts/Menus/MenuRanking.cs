@@ -4,7 +4,6 @@ using TMPro;
 
 public class MenuRanking : MonoBehaviour
 {
-    [SerializeField] private bool toggleRanking = false;
     [SerializeField] private Button volverRanking;
     [SerializeField] private TextMeshProUGUI textoRecordSamurai;
     [SerializeField] private TextMeshProUGUI textoRecordMinotauro;
@@ -12,34 +11,51 @@ public class MenuRanking : MonoBehaviour
 
     void Start()
     {
+        // El botón solo necesita que le asignemos la función una vez al iniciar el juego
+        volverRanking.onClick.AddListener(() => gameObject.SetActive(false));
+    }
+
+    void OnEnable()
+    {
+        // Cada vez que este panel se active (SetActive(true)), se actualizarán los textos
         ActualizarTextosRanking();
-        volverRanking.onClick.AddListener(() => Volver());
     }
 
     private void ActualizarTextosRanking()
     {
-        // Pasamos el nombre EXACTO que usamos al guardar el récord ("Samurai", "Minotauro", "Nieve")
-        textoRecordSamurai.text = ObtenerTextoRecord("Samurai");
-        textoRecordMinotauro.text = ObtenerTextoRecord("Minotauro");
-        textoRecordNieve.text = ObtenerTextoRecord("Nieve");
+        textoRecordSamurai.text = ObtenerTextoTop5("Samurai");
+        textoRecordMinotauro.text = ObtenerTextoTop5("Minotauro");
+        textoRecordNieve.text = ObtenerTextoTop5("Nieve");
     }
 
-    private string ObtenerTextoRecord(string nombreBoss)
+    private string ObtenerTextoTop5(string nombreBoss)
+{
+    string clave = "Top5_" + nombreBoss;
+    string datosGuardados = PlayerPrefs.GetString(clave, "");
+
+    if (string.IsNullOrEmpty(datosGuardados))
     {
-        string clave = "Record_" + nombreBoss;
+        return "1. --:--:--";
+    }
 
-        // Comprobamos si existe un tiempo guardado
-        if (PlayerPrefs.HasKey(clave))
+    string[] entradas = datosGuardados.Split('|');
+    string textoFinal = "";
+
+    for (int i = 0; i < entradas.Length; i++)
+    {
+        string[] partes = entradas[i].Split(':');
+        if (partes.Length == 2)
         {
-            float tiempo = PlayerPrefs.GetFloat(clave);
-            return FormatearTiempo(tiempo);
-        }
-        else
-        {
-            // Si nunca se ha matado a ese boss, mostramos guiones
-            return "--:--:--";
+            string nombre = partes[0];
+            float tiempo = float.Parse(partes[1]);
+            
+            // Formato -> 1. Juan: 00:10:22
+            textoFinal += $"{i + 1}. {nombre}: {FormatearTiempo(tiempo)}\n";
         }
     }
+
+    return textoFinal;
+}
 
     private string FormatearTiempo(float tiempo)
     {
@@ -47,11 +63,5 @@ public class MenuRanking : MonoBehaviour
         int segundos = Mathf.FloorToInt(tiempo % 60);
         int milisegundos = Mathf.FloorToInt((tiempo * 100) % 100);
         return string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
-    }
-
-    private void Volver()
-    {
-        GameManager.gameM.BotonPresionadoSFX();
-        gameObject.SetActive(false);
     }
 }

@@ -79,4 +79,16 @@ public class SamuraiController : CharacterController
             break;
         }
     }
+
+    public void FinalizarCombate()
+    {
+        // 1. Buscamos el cronómetro y le pasamos el nombre del Boss
+        Cronometro crono = FindObjectOfType<Cronometro>();
+        if (crono != null)
+        {
+            Debug.Log("Minotauro derrotado, deteniendo cronómetro...");
+            crono.DetenerYComprobarRecord("Minotauro");
+            Debug.Log("detenerYComprobarRecord ejecutado");
+        }
+    }
 }

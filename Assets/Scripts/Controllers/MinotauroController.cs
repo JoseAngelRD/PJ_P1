@@ -8,6 +8,16 @@ public class MinotauroController : CharacterController
 {
     [SerializeField] private Transform player;
     private int direccionHuida = 0;
+    
+    // Añadimos estas variables para el cronómetro
+    private Cronometro cronometro;
+
+    void Start()
+    {
+        // Buscamos el cronómetro en la escena al empezar
+        cronometro = FindObjectOfType<Cronometro>();
+    }
+
     // Update is called once per frame
     void Update()
     {        
@@ -37,6 +47,7 @@ public class MinotauroController : CharacterController
     {   
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
         {            
+            // LÓGICA DE HUIDA
             if (direccionHuida == 0)
             {
                 direccionHuida = Math.Sign(transform.position.x-player.position.x);
@@ -48,7 +59,8 @@ public class MinotauroController : CharacterController
             }
             transform.localScale = new Vector3(Math.Abs(transform.localScale.x)*-direccionHuida, transform.localScale.y, transform.localScale.z);
             rb2D.velocity = new Vector2(direccionHuida*10, 0);
-        } else
+        } 
+        else
         {
             rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
         }
@@ -65,6 +77,18 @@ public class MinotauroController : CharacterController
                 atacando = true;       
             }
             break;
+        }
+    }
+
+    public void FinalizarCombate()
+    {
+        // 1. Buscamos el cronómetro y le pasamos el nombre del Boss
+        Cronometro crono = FindObjectOfType<Cronometro>();
+        if (crono != null)
+        {
+            Debug.Log("Minotauro derrotado, deteniendo cronómetro...");
+            crono.DetenerYComprobarRecord("Minotauro");
+            Debug.Log("detenerYComprobarRecord ejecutado");
         }
     }
 }

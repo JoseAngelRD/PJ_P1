@@ -26,7 +26,6 @@ public class MinotauroDamageReceiver : DamageReceiver
     protected override void Morir()
     {
         animator.SetTrigger("Death");
-        FindObjectOfType<Cronometro>().DetenerYComprobarRecord("Minotauro");
         GetComponentInParent<SpriteRenderer>().color = new Color(159, 52, 52, 255f);
     }
 }
