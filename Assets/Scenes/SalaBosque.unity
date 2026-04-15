@@ -4945,6 +4945,8 @@ MonoBehaviour:
   daniado: 0
   isKnockback: 0
   shield: 0
+  ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
+  dashSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
   menuMuerte: {fileID: 91957557}
   player: {fileID: 2059148083}
 --- !u!1 &864339325
@@ -11565,6 +11567,8 @@ MonoBehaviour:
   daniado: 0
   isKnockback: 0
   shield: 0
+  ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
+  dashSFX: {fileID: 0}
   menuMuerte: {fileID: 1581430733}
 --- !u!95 &2059148080
 Animator:

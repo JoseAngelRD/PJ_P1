@@ -15,15 +15,21 @@ public class MenuOpciones : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        volverOpc.onClick.AddListener(() => gameObject.SetActive(false));        
+        volverOpc.onClick.AddListener(() => VolverOpciones());        
         volumen.onValueChanged.AddListener(delegate { Volumen(); });
 
         ConfigurarResolucion();
         ConfigurarModoPantalla();
     }
 
-    private void Volumen()
+    private void VolverOpciones()
     {
+        GameManager.gameM.BotonPresionadoSFX();
+        gameObject.SetActive(false);
+    }
+
+    private void Volumen()
+    {        
         GameManager.gameM.music.volume = volumen.value;
     }
 

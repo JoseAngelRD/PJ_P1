@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class MenuGameOver : MonoBehaviour
 {
     [SerializeField] private Button botonReintentar;
-    [SerializeField] private Button botonMenuPrincipal;
+    [SerializeField] private Button botonMenuPrincipal;    
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class MenuGameOver : MonoBehaviour
 
     private void Reintentar()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         GameManager.gameM.isGameOver = false;
         GameManager.gameM.ReiniciarCancion();
@@ -25,6 +26,7 @@ public class MenuGameOver : MonoBehaviour
 
     private void MenuPrincipal()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         Time.timeScale = 1;
         GameManager.gameM.isGameOver = false;
         SceneManager.LoadScene(0);

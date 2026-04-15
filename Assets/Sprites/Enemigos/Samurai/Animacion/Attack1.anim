@@ -98,6 +98,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.33333334
+    functionName: SonidoAtaque
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: f59938d7c773d9147b39897a6f5ab4b2, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.5
     functionName: EndHit
     data: 

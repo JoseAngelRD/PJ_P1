@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 public class SamuraiController : CharacterController
-{    
+{        
     // Update is called once per frame
     void Update()
     {
@@ -60,7 +60,7 @@ public class SamuraiController : CharacterController
     }    
 
     protected override void Atacar(int id)
-    {
+    {        
         switch(id)
         {
             case 0:

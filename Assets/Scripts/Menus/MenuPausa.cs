@@ -17,7 +17,7 @@ public class MenuPausa : MonoBehaviour
     void Start()
     {
         botonReanudar.onClick.AddListener(() => Reanudar());
-        botonOpciones.onClick.AddListener(() => menuOpciones.SetActive(true));
+        botonOpciones.onClick.AddListener(() => ActivarOpciones());
         botonMenuPrincipal.onClick.AddListener(() => MenuPrincipal());
     }
 
@@ -54,13 +54,21 @@ public class MenuPausa : MonoBehaviour
 
     private void Reanudar()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         ToggleMenu();
         Time.timeScale = 1;
         GameManager.gameM.TogglePause();
     }
 
+    private void ActivarOpciones()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        menuOpciones.SetActive(true);
+    }
+
     private void MenuPrincipal()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
         GameManager.gameM.CambiarCancion(0);

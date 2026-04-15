@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public AudioSource music;
     public AudioSource SFX;
 
+    public AudioClip botonPresionado;
+
     private void Awake()
     {
         if (gameM == null)
@@ -62,5 +64,17 @@ public class GameManager : MonoBehaviour
             music.volume += 0.1f;
             yield return new WaitForSeconds(0.01f);
         }
+    }
+
+    public void BotonPresionadoSFX()
+    {
+        SFX.PlayOneShot(botonPresionado);
+    }
+
+    public void ReproducirSonido(AudioClip sonido, float pitchMin)
+    {
+        System.Random r = new System.Random();
+        SFX.pitch = 0.8f + pitchMin + (float) r.NextDouble();
+        SFX.PlayOneShot(sonido);
     }
 }

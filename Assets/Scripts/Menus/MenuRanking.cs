@@ -13,7 +13,7 @@ public class MenuRanking : MonoBehaviour
     void Start()
     {
         ActualizarTextosRanking();
-        volverRanking.onClick.AddListener(() => gameObject.SetActive(false));
+        volverRanking.onClick.AddListener(() => Volver());
     }
 
     private void ActualizarTextosRanking()
@@ -47,5 +47,11 @@ public class MenuRanking : MonoBehaviour
         int segundos = Mathf.FloorToInt(tiempo % 60);
         int milisegundos = Mathf.FloorToInt((tiempo * 100) % 100);
         return string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
+    }
+
+    private void Volver()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        gameObject.SetActive(false);
     }
 }

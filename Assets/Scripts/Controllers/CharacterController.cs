@@ -23,7 +23,9 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] protected float attackDamage;
     public bool daniado = false;
     public bool isKnockback = false;
-    [SerializeField] protected bool shield = false;  
+    [SerializeField] protected bool shield = false; 
+    [SerializeField] private AudioClip ataqueSFX;
+    [SerializeField] private AudioClip dashSFX;
 
     [SerializeField] protected GameObject menuMuerte = null;  
 
@@ -59,6 +61,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public IEnumerator Dash()
     {
+        GameManager.gameM.ReproducirSonido(dashSFX, 0);
         rb2D.AddForce(Vector2.right*transform.localScale.x*dashForce, ForceMode2D.Impulse);
         isDashing = true;
 
@@ -102,6 +105,11 @@ public abstract class CharacterController : MonoBehaviour
         {
             menuMuerte.SetActive(true);
         }
+    }
+
+    public void SonidoAtaque(float pitchMin)
+    {
+        GameManager.gameM.ReproducirSonido(ataqueSFX, pitchMin);
     }
     
     protected abstract void Atacar(int id);

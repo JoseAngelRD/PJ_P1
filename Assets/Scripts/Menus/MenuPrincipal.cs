@@ -37,37 +37,54 @@ public class MenuPrincipalV2 : MonoBehaviour
         botonMinotauro.onClick.AddListener(() => CargarMinotauro());
         botonNieve.onClick.AddListener(() => CargarNieve());
 
-        botonOpciones.onClick.AddListener(() => canvasOpciones.SetActive(true));        
-        botonRanking.onClick.AddListener(() => canvasRanking.SetActive(true));  
+        botonOpciones.onClick.AddListener(() => ActivarOpciones());        
+        botonRanking.onClick.AddListener(() => ActivarRanking());  
         botonSalir.onClick.AddListener(() => Salir());        
     }
 
     private void ToggleJugar()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         toggleJugar = !toggleJugar;
         canvasJugar.SetActive(toggleJugar);
     }
 
     private void CargarNieve()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(1);
         GameManager.gameM.CambiarCancion(1);
     }
 
     private void CargarMinotauro()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(2);
         GameManager.gameM.CambiarCancion(2);
     }    
 
     private void CargarSamurai()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(3);
         GameManager.gameM.CambiarCancion(3);
     }
 
+    private void ActivarOpciones()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        canvasOpciones.SetActive(true);
+    }
+
+    private void ActivarRanking()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        canvasRanking.SetActive(true);
+    }
+
     public void Salir()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         Application.Quit();
     }   
 }
