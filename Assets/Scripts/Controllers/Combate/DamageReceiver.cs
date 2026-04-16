@@ -8,15 +8,20 @@ public class DamageReceiver : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     protected float vida;
+    protected float vidaCooldown = 0f;
     [SerializeField] protected float vidaMaxima = 100;
 
     [SerializeField] public float fuerzaKnockback = 7f;
-    [SerializeField] protected RectTransform vidaUI = null;    
+    [SerializeField] protected RectTransform vidaUI = null;
 
-     void Start()
+    void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
         animator = GetComponentInParent<Animator>();
+    }
+
+    void Awake()
+    {
         vida = vidaMaxima;
     }
 
@@ -25,8 +30,9 @@ public class DamageReceiver : MonoBehaviour
         if (vida > 0)
         {
             vida -= cantidad;
+            vidaCooldown += cantidad;
             vidaUI.localScale = new Vector3(vida / vidaMaxima, vidaUI.localScale.y, vidaUI.localScale.z);
-        
+
             Debug.Log(gameObject.name + " vida: " + vida);
 
             if (vida <= 0)
@@ -41,12 +47,13 @@ public class DamageReceiver : MonoBehaviour
     }
 
     protected virtual void Morir()
-    {   
+    {
         string bossActual = "";
         animator.SetTrigger("Death");
         Debug.Log(gameObject.name + " muerto");
 
-        if(gameObject.name!="Player"){
+        if (gameObject.name != "Player")
+        {
             switch (gameObject.scene.name)
             {
                 case "SalaBosque":
@@ -59,20 +66,33 @@ public class DamageReceiver : MonoBehaviour
                     bossActual = "Nieve";
                     break;
             }
-        
-        FindObjectOfType<Cronometro>().DetenerYComprobarRecord(bossActual);
+
+            FindObjectOfType<Cronometro>().DetenerYComprobarRecord(bossActual);
         }
     }
 
     protected virtual void ReaccionAlDanio(Vector2 origen)
     {
+
         Vector2 direccion = (transform.position - (Vector3)origen).normalized;
         rb.velocity = Vector2.zero;
-        rb.AddForce(direccion * fuerzaKnockback, ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(direccion.x, 0) * fuerzaKnockback, ForceMode2D.Impulse);
         StartCoroutine(KnockbackRoutine());
 
-        GetComponentInParent<CharacterController>().EndAttack();
-        GetComponentInParent<Animator>().SetTrigger("Hurt");
+        if (transform.parent.name == "Player")
+        {
+            GetComponentInParent<CharacterController>().EndAttack();
+            GetComponentInParent<Animator>().SetTrigger("Hurt");
+        }
+        else
+        {
+            if (vidaCooldown >= 0.2 * vidaMaxima)
+            {
+                GetComponentInParent<CharacterController>().EndAttack();
+                GetComponentInParent<Animator>().SetTrigger("Hurt");
+                vidaCooldown = 0f;
+            }
+        }
     }
 
     public float GetVida()
@@ -84,7 +104,7 @@ public class DamageReceiver : MonoBehaviour
     {
         return vidaMaxima;
     }
-    
+
     IEnumerator KnockbackRoutine()
     {
         GetComponentInParent<CharacterController>().isKnockback = true;
@@ -93,5 +113,5 @@ public class DamageReceiver : MonoBehaviour
 
         GetComponentInParent<CharacterController>().isKnockback = false;
     }
-    
+
 }

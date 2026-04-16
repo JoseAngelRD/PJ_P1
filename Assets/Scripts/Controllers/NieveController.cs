@@ -62,18 +62,33 @@ public class NieveController : CharacterController
 
     void Update()
     {  
+        Debug.Log("Raiz del árbol de decisiones: " + raizArbol);
         // Si el boss está muerto, dañado o sufriendo knockback, detenemos la IA para respetar físicas y animaciones
-        if (vidaActual <= 0 || daniado || isKnockback) return;
+        if (vidaActual <= 0 || daniado || isKnockback) 
+        {
+            Debug.Log("Vida Actual: " + vidaActual + ", Dañado: " + daniado + ", Knockback: " + isKnockback);
+            return;
+        }
 
         if (cooldownActual > 0) cooldownActual -= Time.deltaTime;
 
         if (atacando || isDashing)
         {
+            Debug.Log("2" + raizArbol);
             movimiento = Vector2.zero;
             return;
         }
         
         // Ejecutar árbol de decisiones de la IA
+        
+         if (raizArbol != null && player != null)
+        {
+            NodoArbol nodoFinal = raizArbol.Decide(player);
+            if (nodoFinal is Accion accion)
+            {
+                accion.EjecutarAccion(player);
+            }
+        }
         if (raizArbol != null && player != null)
         {
             NodoArbol nodoFinal = raizArbol.Decide(player);
