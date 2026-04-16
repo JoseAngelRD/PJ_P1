@@ -12,22 +12,34 @@ public abstract class CharacterController : MonoBehaviour
     public Vector2 movimiento;
     protected Animator animator;
 
+    [HideInInspector] public float cooldownActual = 0f;
     // Variables de salto
     [SerializeField] protected LayerMask groundLayer;
     public bool onGround = false;
 
     // Variables de combate
-    [SerializeField] protected bool atacando = false;
+    [SerializeField] public bool atacando = false;
     protected bool isDashing = false;
     [SerializeField] List<GameObject> hitsAtaques;
     [SerializeField] protected float attackDamage;
     public bool daniado = false;
     public bool isKnockback = false;
-    [SerializeField] protected bool shield = false; 
+    [SerializeField] protected bool shield = false;
     [SerializeField] private AudioClip ataqueSFX;
     [SerializeField] private AudioClip dashSFX;
+     // Propiedades que leen la vida en tiempo real
+     private DamageReceiver damageReceiver;
+    public float vidaActual 
+    { 
+        get { return damageReceiver != null ? damageReceiver.GetVida() : 0f; } 
+    }
+    
+    public float vidaMaxima 
+    { 
+        get { return damageReceiver != null ? damageReceiver.GetVidaMaxima() : 100f; } 
+    }
 
-    [SerializeField] protected GameObject menuMuerte = null;  
+    [SerializeField] protected GameObject menuMuerte = null;
 
     // Start is called before the first frame update
     protected void Start()
@@ -45,7 +57,7 @@ public abstract class CharacterController : MonoBehaviour
         // Espera a salir del suelo
         yield return new WaitUntil(() => !onGround);
         //Debug.Log("Salgo del suelo");
-        
+
         // Esperar a que aterrize
         yield return new WaitUntil(() => onGround && Mathf.Abs(rb2D.velocity.y) < 0.01f);
         //Debug.Log("Aterrizo");
@@ -54,15 +66,15 @@ public abstract class CharacterController : MonoBehaviour
 
     protected void Saltar()
     {
-        rb2D.AddForce(Vector2.up*jumpForce, ForceMode2D.Impulse);
-        animator.SetTrigger("Jump");            
+        rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        animator.SetTrigger("Jump");
         StartCoroutine(Aterrizaje());
     }
 
     public IEnumerator Dash()
     {
         GameManager.gameM.ReproducirSonido(dashSFX, 0);
-        rb2D.AddForce(Vector2.right*transform.localScale.x*dashForce, ForceMode2D.Impulse);
+        rb2D.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
         isDashing = true;
 
         yield return new WaitForSeconds(0.2f);
@@ -88,9 +100,9 @@ public abstract class CharacterController : MonoBehaviour
         foreach (GameObject h in hitsAtaques)
         {
             h.GetComponent<BoxCollider2D>().enabled = false;
-        }        
-        atacando = false; 
-        isDashing = false;       
+        }
+        atacando = false;
+        isDashing = false;
     }
 
     public void EndHurt()
@@ -111,6 +123,12 @@ public abstract class CharacterController : MonoBehaviour
     {
         GameManager.gameM.ReproducirSonido(ataqueSFX, pitchMin);
     }
-    
-    protected abstract void Atacar(int id);
+
+    public abstract void Atacar(int id);
+
+    public void SetMovimiento(Vector2 nuevoMovimiento)
+    {
+        movimiento = nuevoMovimiento;
+    }
+
 }

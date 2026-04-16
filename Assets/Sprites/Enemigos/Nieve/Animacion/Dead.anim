@@ -125,7 +125,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.5
-    functionName: ActivarMenuMuerte
+    functionName: FinalizarCombate
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: e52bfcf3838efef428ef973f8a10d806, type: 3}
     floatParameter: 0

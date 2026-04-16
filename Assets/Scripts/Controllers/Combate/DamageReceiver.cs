@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
+
+    Rigidbody2D rb;
+    Animator animator;
     protected float vida;
     [SerializeField] protected float vidaMaxima = 100;
 
+    [SerializeField] public float fuerzaKnockback = 7f;
     [SerializeField] protected RectTransform vidaUI = null;    
 
-    void Awake()
+     void Start()
     {
+        rb = GetComponentInParent<Rigidbody2D>();
+        animator = GetComponentInParent<Animator>();
         vida = vidaMaxima;
     }
 
@@ -35,12 +41,57 @@ public class DamageReceiver : MonoBehaviour
     }
 
     protected virtual void Morir()
-    {
+    {   
+        string bossActual = "";
+        animator.SetTrigger("Death");
         Debug.Log(gameObject.name + " muerto");
+
+        if(gameObject.name!="Player"){
+            switch (gameObject.scene.name)
+            {
+                case "SalaBosque":
+                    bossActual = "Minotauro";
+                    break;
+                case "SalaDarkForest":
+                    bossActual = "Samurai";
+                    break;
+                case "SalaNieve":
+                    bossActual = "Nieve";
+                    break;
+            }
+        
+        FindObjectOfType<Cronometro>().DetenerYComprobarRecord(bossActual);
+        }
     }
 
     protected virtual void ReaccionAlDanio(Vector2 origen)
     {
-        
+        Vector2 direccion = (transform.position - (Vector3)origen).normalized;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(direccion * fuerzaKnockback, ForceMode2D.Impulse);
+        StartCoroutine(KnockbackRoutine());
+
+        GetComponentInParent<CharacterController>().EndAttack();
+        GetComponentInParent<Animator>().SetTrigger("Hurt");
     }
+
+    public float GetVida()
+    {
+        return vida;
+    }
+
+    public float GetVidaMaxima()
+    {
+        return vidaMaxima;
+    }
+    
+    IEnumerator KnockbackRoutine()
+    {
+        GetComponentInParent<CharacterController>().isKnockback = true;
+
+        yield return new WaitForSeconds(0.2f);
+
+        GetComponentInParent<CharacterController>().isKnockback = false;
+    }
+    
 }

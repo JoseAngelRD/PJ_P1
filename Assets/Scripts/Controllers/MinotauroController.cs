@@ -1,82 +1,112 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MinotauroController : CharacterController
 {
-    [SerializeField] private Transform player;
-    private int direccionHuida = 0;
-    
-    // Añadimos estas variables para el cronómetro
-    private Cronometro cronometro;
+    [Header("Configuración IA")]
+    public GameObject player;
+    public float rangoDeAtaque = 2f;
+    public float distanciaEsquive = 4f;
+    public float cooldownMaximo = 2f;
+    // Referencia al script que maneja la vida
+    private DamageReceiver damageReceiver;
 
-    void Start()
+    private NodoArbol raizArbol;
+
+    // Usamos 'new' y 'base.Start()' para no perder la inicialización de hitboxes, rb2D y animator del padre
+    protected new void Start()
     {
-        // Buscamos el cronómetro en la escena al empezar
-        cronometro = FindObjectOfType<Cronometro>();
+        base.Start();
+
+        damageReceiver = GetComponentInChildren<DamageReceiver>();
+        if (damageReceiver == null) damageReceiver = GetComponent<DamageReceiver>();
+
+        ConstruirArbolIA();
     }
 
-    // Update is called once per frame
+    private void ConstruirArbolIA()
+    {
+        // --- 1. ACCIONES ---
+        Accion pego = new Pego(this);
+        Accion esquivo = new Esquivo(this);
+        Accion meAcerco = new MeAcerco(this);
+        Accion meQuedoQuieto = new MeQuedoQuieto(this);
+        Accion seguirUltimaAccion = new SeguirUltimaAccion();
+
+        // --- 2. NODOS DE PROBABILIDAD ---
+        Decision probCombateSi50 = new ProbabilidadDecision(pego, esquivo, 60f);
+        Decision probCombateNo50 = new ProbabilidadDecision(pego, esquivo, 40f);
+
+        Decision probMovSi50 = new ProbabilidadDecision(meQuedoQuieto, meAcerco, 5f);
+        Decision probMovNo50 = new ProbabilidadDecision(meQuedoQuieto, meAcerco, 30f);
+
+        // --- 3. RAMA IZQUIERDA (EstaEnRango? -> Si) ---
+        Decision coolCombateSi50 = new EstoyCooldown(seguirUltimaAccion, probCombateSi50, this);
+        Decision coolCombateNo50 = new EstoyCooldown(seguirUltimaAccion, probCombateNo50, this);
+
+        Decision menos50Ataca = new MenosMitadVida(coolCombateSi50, coolCombateNo50, this);
+        Decision coolNoAtaca = new EstoyCooldown(seguirUltimaAccion, pego, this);
+
+        Decision meAtaca = new MeAtaca(menos50Ataca, coolNoAtaca);
+
+        // --- 4. RAMA DERECHA (EstaEnRango? -> No) ---
+        Decision coolMovSi50 = new EstoyCooldown(seguirUltimaAccion, probMovSi50, this);
+        Decision coolMovNo50 = new EstoyCooldown(seguirUltimaAccion, probMovNo50, this);
+
+        Decision menos50Lejos = new MenosMitadVida(coolMovSi50, coolMovNo50, this);
+
+        // --- 5. RAÍZ ---
+        raizArbol = new EstaEnRango(meAtaca, menos50Lejos, this.transform, rangoDeAtaque);
+    }
+
     void Update()
-    {        
-        Debug.Log(GetComponent<SpriteRenderer>().color);
-        if (atacando)
+    {
+        // Si el boss está muerto, dañado o sufriendo knockback, detenemos la IA para respetar físicas y animaciones
+        if (vidaActual <= 0 || daniado || isKnockback) return;
+
+        if (cooldownActual > 0) cooldownActual -= Time.deltaTime;
+
+        if (atacando || isDashing)
         {
-            movimiento = Vector2.zero;            
+            movimiento = Vector2.zero;
             return;
         }
 
-        movimiento.x = Input.GetAxisRaw("Horizontal");
-        movimiento = movimiento.normalized;
+        // Ejecutar árbol de decisiones de la IA
+        if (raizArbol != null && player != null)
+        {
+            NodoArbol nodoFinal = raizArbol.Decide(player);
+            if (nodoFinal is Accion accion)
+            {
+                accion.EjecutarAccion(player);
+            }
+        }
 
+        // Volteo de sprite (Flip)
         if (movimiento.x < 0.0f) transform.localScale = new Vector3(Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else if (movimiento.x > 0.0f) transform.localScale = new Vector3(-Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
+        // Actualizamos el Animator (ya instanciado en CharacterController)
         animator.SetFloat("Horizontal", movimiento.x);
         animator.SetFloat("Speed", movimiento.magnitude);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Atacar(0);
-        }
     }
 
     void FixedUpdate()
-    {   
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
-        {            
-            // LÓGICA DE HUIDA
-            if (direccionHuida == 0)
-            {
-                direccionHuida = Math.Sign(transform.position.x-player.position.x);
-                Debug.Log(direccionHuida);
-                if (direccionHuida == 0)
-                {
-                    direccionHuida = 1;
-                }
-            }
-            transform.localScale = new Vector3(Math.Abs(transform.localScale.x)*-direccionHuida, transform.localScale.y, transform.localScale.z);
-            rb2D.velocity = new Vector2(direccionHuida*10, 0);
-        } 
-        else
-        {
-            rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
-        }
+    {
+        // Respetamos físicas externas (como el Knockback) si está sufriendo daño
+        if (vidaActual <= 0 || daniado || isKnockback) return;
+
+        rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
     }
 
-    protected override void Atacar(int id)
+    // Al ser un método abstracto en la clase base, ESTAMOS OBLIGADOS a usar override
+    public override void Atacar(int id)
     {
-        switch(id)
+        if (id == 0)
         {
-            case 0:
-            {
-                Debug.Log("LeftClick");
-                animator.SetTrigger("Attack");
-                atacando = true;       
-            }
-            break;
+            animator.SetTrigger("Attack");
+            atacando = true; // Variable del padre
+            cooldownActual = cooldownMaximo;
         }
     }
 
@@ -92,3 +122,4 @@ public class MinotauroController : CharacterController
         }
     }
 }
+

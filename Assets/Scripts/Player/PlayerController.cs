@@ -74,7 +74,7 @@ public class PlayerController : CharacterController
         rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
     }    
 
-    protected override void Atacar(int id)
+    public override void Atacar(int id)
     {
         switch (id)
         {

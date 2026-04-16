@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  jumpForce: 6
+  jumpForce: 9
   dashForce: 10
   tamRaycast: 0.55
   movimiento: {x: 0, y: 0}
@@ -339,6 +339,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoTiempo: {fileID: 731264596}
+  panelNombre: {fileID: 0}
+  inputNombre: {fileID: 0}
+  botonGuardar: {fileID: 0}
+  panelVictoriaNormal: {fileID: 0}
 --- !u!1 &80725499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,8 +2615,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8538ff36a904fc14ea085966ca1d5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
   vidaMaxima: 100
   vidaUI: {fileID: 937400081}
+  animator: {fileID: 0}
+  rb: {fileID: 0}
+  fuerzaKnockback: 12
 --- !u!70 &676259184
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4533,7 +4541,8 @@ GameObject:
   m_Component:
   - component: {fileID: 916905325}
   - component: {fileID: 916905326}
-  - component: {fileID: 916905327}
+  - component: {fileID: 916905328}
+  - component: {fileID: 916905329}
   m_Layer: 6
   m_Name: HurtCollider
   m_TagString: Untagged
@@ -4588,10 +4597,10 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04007709, y: -0.1452465}
-  m_Size: {x: 2.7038753, y: 2.871976}
+  m_Offset: {x: 0.06433368, y: -0.2778101}
+  m_Size: {x: 1.5880666, y: 2.3351736}
   m_Direction: 0
---- !u!114 &916905327
+--- !u!114 &916905328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4600,10 +4609,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 916905324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d246dc788e2c3a948bc3688159d2fa7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &916905329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916905324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688d5d60d2cd5ed42a9f273ee8684a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 100
+  fuerzaKnockback: 7
   vidaUI: {fileID: 496064907}
 --- !u!1 &930342051
 GameObject:
@@ -4797,7 +4823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 53462723}
-  velocidad: 0.2
+  velocidad: 0.02
 --- !u!4 &1032324021
 Transform:
   m_ObjectHideFlags: 0
@@ -9727,12 +9753,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937510646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52bfcf3838efef428ef973f8a10d806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
+  velocidad: 3
   jumpForce: 150
   dashForce: 10
   tamRaycast: 0.4
@@ -9744,13 +9770,18 @@ MonoBehaviour:
   atacando: 0
   hitsAtaques:
   - {fileID: 1826419869}
-  attackDamage: 100
+  attackDamage: 5
   daniado: 0
   isKnockback: 0
   shield: 0
   ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
   dashSFX: {fileID: 0}
   menuMuerte: {fileID: 1192819685}
+  player: {fileID: 53462723}
+  rangoDeAtaque: 1.5
+  distanciaEsquive: 4
+  cooldownMaximo: 2
+  cooldownActual: 0
 --- !u!1 &1948976663
 GameObject:
   m_ObjectHideFlags: 0
