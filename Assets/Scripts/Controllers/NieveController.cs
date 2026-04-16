@@ -7,21 +7,14 @@ public class NieveController : CharacterController
     public GameObject player; 
     public float rangoDeAtaque = 2f;
     public float distanciaEsquive = 4f;
-    public float cooldownMaximo = 2f;
-    
-    // Referencia al script que maneja la vida
-    private DamageReceiver damageReceiver;
+    public float cooldownMaximo = 2f;    
 
     private NodoArbol raizArbol;
 
     // Usamos 'new' y 'base.Start()' para no perder la inicialización de hitboxes, rb2D y animator del padre
     protected new void Start()
     {
-        base.Start(); 
-
-        damageReceiver = GetComponentInChildren<DamageReceiver>();
-        if (damageReceiver == null) damageReceiver = GetComponent<DamageReceiver>();
-
+        base.Start();
         ConstruirArbolIA();
     }
 
@@ -136,6 +129,7 @@ public class NieveController : CharacterController
             crono.DetenerYComprobarRecord("Minotauro");
             Debug.Log("detenerYComprobarRecord ejecutado");
         }
+        menuMuerte.SetActive(true);
     }
 }
 

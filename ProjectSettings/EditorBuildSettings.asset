@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 3f75d68a2b29f524b825f30ef849b017
-  - enabled: 0
-    path: Assets/Scenes/SalaPrincipal.unity
-    guid: 03de91e1a6924724dab092bbbe36df4f
   - enabled: 1
     path: Assets/Scenes/SalaNieve.unity
     guid: 50d7656839cf0fa47a958e928f322f01

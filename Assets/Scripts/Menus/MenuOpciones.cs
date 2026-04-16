@@ -8,6 +8,7 @@ public class MenuOpciones : MonoBehaviour
 {
     [SerializeField] private Button volverOpc;
     [SerializeField] private Slider volumen;
+    [SerializeField] private Slider efectos;
     [SerializeField] private TMP_Dropdown dropdownResolucion;
     [SerializeField] private TMP_Dropdown dropdownPantalla;
     private Resolution[] resoluciones;
@@ -17,9 +18,16 @@ public class MenuOpciones : MonoBehaviour
     {
         volverOpc.onClick.AddListener(() => VolverOpciones());        
         volumen.onValueChanged.AddListener(delegate { Volumen(); });
+        efectos.onValueChanged.AddListener(delegate { VolumenSFX(); });
 
         ConfigurarResolucion();
         ConfigurarModoPantalla();
+    }
+
+    void OnEnable()
+    {
+        volumen.value = GameManager.gameM.music.volume;
+        efectos.value = GameManager.gameM.SFX.volume;
     }
 
     private void VolverOpciones()
@@ -31,6 +39,11 @@ public class MenuOpciones : MonoBehaviour
     private void Volumen()
     {        
         GameManager.gameM.music.volume = volumen.value;
+    }
+
+    private void VolumenSFX()
+    {        
+        GameManager.gameM.SFX.volume = efectos.value;
     }
 
     private void ConfigurarResolucion()

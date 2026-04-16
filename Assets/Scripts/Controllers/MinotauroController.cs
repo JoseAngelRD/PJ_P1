@@ -8,9 +8,8 @@ public class MinotauroController : CharacterController
     public float rangoDeAtaque = 2f;
     public float distanciaEsquive = 4f;
     public float cooldownMaximo = 2f;
-
-    // Referencia al script que maneja la vida
-    private DamageReceiver damageReceiver;
+    private int direccionHuida = 0;
+    // Referencia al script que maneja la vida    
 
     private NodoArbol raizArbol;
 
@@ -18,10 +17,6 @@ public class MinotauroController : CharacterController
     protected new void Start()
     {
         base.Start();
-
-        damageReceiver = GetComponentInChildren<DamageReceiver>();
-        if (damageReceiver == null) damageReceiver = GetComponent<DamageReceiver>();
-
         ConstruirArbolIA();
     }
 
@@ -64,9 +59,8 @@ public class MinotauroController : CharacterController
     {
         Debug.Log("Raiz del árbol de decisiones: " + raizArbol);
         // Si el boss está muerto, dañado o sufriendo knockback, detenemos la IA para respetar físicas y animaciones
-        if (vidaActual <= 0 || daniado || isKnockback)
-        {
-            Debug.Log("Vida Actual: " + vidaActual + ", Dañado: " + daniado + ", Knockback: " + isKnockback);
+        if (vidaActual <= 0 || daniado || isKnockback) {
+            Debug.Log("1");
             return;
         }
 
@@ -74,7 +68,7 @@ public class MinotauroController : CharacterController
 
         if (atacando || isDashing)
         {
-            Debug.Log("2" + raizArbol);
+            Debug.Log("2");
             movimiento = Vector2.zero;
             return;
         }
@@ -110,9 +104,25 @@ public class MinotauroController : CharacterController
     void FixedUpdate()
     {
         // Respetamos físicas externas (como el Knockback) si está sufriendo daño
-        if (vidaActual <= 0 || daniado || isKnockback) return;
-
-        rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
+        if (daniado || isKnockback) return;
+        
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {            
+            if (direccionHuida == 0)
+            {
+                direccionHuida = Math.Sign(transform.position.x-player.transform.position.x);
+                Debug.Log(direccionHuida);
+                if (direccionHuida == 0)
+                {
+                    direccionHuida = 1;
+                }
+            }
+            transform.localScale = new Vector3(Math.Abs(transform.localScale.x)*-direccionHuida, transform.localScale.y, transform.localScale.z);
+            rb2D.velocity = new Vector2(direccionHuida*10, 0);
+        } else
+        {
+            rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
+        }
     }
 
     // Al ser un método abstracto en la clase base, ESTAMOS OBLIGADOS a usar override
@@ -128,6 +138,7 @@ public class MinotauroController : CharacterController
 
     public void FinalizarCombate()
     {
+        // Huida 
         // 1. Buscamos el cronómetro y le pasamos el nombre del Boss
         Cronometro crono = FindObjectOfType<Cronometro>();
         if (crono != null)
@@ -136,6 +147,7 @@ public class MinotauroController : CharacterController
             crono.DetenerYComprobarRecord("Minotauro");
             Debug.Log("detenerYComprobarRecord ejecutado");
         }
+        menuMuerte.SetActive(true);
     }
 }
 

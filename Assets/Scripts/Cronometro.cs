@@ -7,6 +7,7 @@ public class Cronometro : MonoBehaviour
 {
     [Header("Interfaz Cronómetro")]
     [SerializeField] private TextMeshProUGUI textoTiempo;
+    [SerializeField] private TextMeshProUGUI textoMenuWin;
 
     [Header("Panel Nuevo Récord")]
     [SerializeField] private GameObject panelNombre;
@@ -47,6 +48,7 @@ public class Cronometro : MonoBehaviour
         int milisegundos = Mathf.FloorToInt((tiempoActual * 100) % 100);
 
         textoTiempo.text = string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
+        textoMenuWin.text = string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
     }
 
     public void DetenerYComprobarRecord(string nombreBoss)
@@ -54,34 +56,37 @@ public class Cronometro : MonoBehaviour
         if (!estaCorriendo) return;
 
         estaCorriendo = false;
-        bossActual = nombreBoss;
-
-        // 1. SIEMPRE abrimos la pantalla general de Victoria
-        if (panelVictoriaNormal != null)
-        {
-            panelVictoriaNormal.SetActive(true);
-        }
+        bossActual = nombreBoss;        
 
         string claveRecord = "Top5_" + nombreBoss;
         List<ScoreEntry> mejoresTiempos = CargarScores(claveRecord);
 
-        // 2. Comprobamos si entramos en el Top 5
+        // Comprobamos si entramos en el Top 5
         if (mejoresTiempos.Count < 5 || tiempoActual < mejoresTiempos[mejoresTiempos.Count - 1].tiempo)
         {
             // ¡Es récord! Encendemos el sub-panel para pedir el nombre
+            Debug.Log("RECORD");
             AbrirPanelNombre();
         }
         else 
         {
             // NO es récord. Nos aseguramos de que el sub-panel esté apagado
             Debug.Log($"No lograste entrar al Top 5 de {nombreBoss}.");
+            if (panelVictoriaNormal != null) panelVictoriaNormal.SetActive(true);
             if (panelNombre != null) panelNombre.SetActive(false);
         }
     }
 
     private void AbrirPanelNombre()
     {
-        if (panelNombre != null) panelNombre.SetActive(true);
+        Debug.Log("Abriendo panel");
+        panelNombre.SetActive(true);
+        /*if (panelNombre != null) {
+            panelNombre.SetActive(true);
+        } else
+        {
+            Debug.Log("NO LO ABRO");
+        }*/
         
         botonGuardar.onClick.RemoveAllListeners();
         botonGuardar.onClick.AddListener(() => GuardarRecordFinal());
@@ -114,6 +119,7 @@ public class Cronometro : MonoBehaviour
         // AL GUARDAR: Simplemente apagamos el sub-panel de pedir nombre.
         // El MenuWin general seguirá viéndose de fondo para que el jugador pueda elegir "Volver a jugar" o "Menu Principal".
         if (panelNombre != null) panelNombre.SetActive(false);
+        if (panelVictoriaNormal != null) panelVictoriaNormal.SetActive(true);
         
         Debug.Log("¡Récord guardado con éxito!");
     }

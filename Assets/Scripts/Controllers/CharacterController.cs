@@ -27,8 +27,7 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] protected bool shield = false;
     [SerializeField] private AudioClip ataqueSFX;
     [SerializeField] private AudioClip dashSFX;
-     // Propiedades que leen la vida en tiempo real
-    private DamageReceiver damageReceiver;
+    protected DamageReceiver damageReceiver;
     public float vidaActual 
     { 
         get { return damageReceiver != null ? damageReceiver.GetVida() : 0f; } 
@@ -51,6 +50,8 @@ public abstract class CharacterController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         damageReceiver = GetComponentInChildren<DamageReceiver>();
         animator = gameObject.GetComponent<Animator>();
+        damageReceiver = GetComponentInChildren<DamageReceiver>();
+        if (damageReceiver == null) damageReceiver = GetComponent<DamageReceiver>();
     }
 
     protected IEnumerator Aterrizaje()

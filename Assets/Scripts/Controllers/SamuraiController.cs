@@ -90,5 +90,6 @@ public class SamuraiController : CharacterController
             crono.DetenerYComprobarRecord("Minotauro");
             Debug.Log("detenerYComprobarRecord ejecutado");
         }
+        menuMuerte.SetActive(true);
     }
 }

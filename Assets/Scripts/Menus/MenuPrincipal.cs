@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.UI;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class MenuPrincipalV2 : MonoBehaviour
+public class MenuPrincipal : MonoBehaviour
 {
     // Jugar
     [SerializeField] private Button botonJugar;
@@ -51,37 +50,48 @@ public class MenuPrincipalV2 : MonoBehaviour
         botonJugarMinotauro.onClick.AddListener(() => CargarMinotauro());
         botonJugarNieve.onClick.AddListener(() => CargarNieve());
 
-        botonOpciones.onClick.AddListener(() => canvasOpciones.SetActive(true));
+        botonOpciones.onClick.AddListener(() => MostrarOpciones());
 
         botonSalir.onClick.AddListener(() => Salir());
     }
 
+    private void MostrarOpciones()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        canvasOpciones.SetActive(true);
+    }
+
     private void ToggleJugar()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         toggleJugar = !toggleJugar;
         canvasJugar.SetActive(toggleJugar);
     }
 
     private void CargarNieve()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(1);
         GameManager.gameM.CambiarCancion(1);
     }
 
     private void CargarMinotauro()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(2);
         GameManager.gameM.CambiarCancion(2);
     }
 
     private void CargarSamurai()
     {
+        GameManager.gameM.BotonPresionadoSFX();
         SceneManager.LoadScene(3);
         GameManager.gameM.CambiarCancion(3);
     }
 
     private void MostrarRankingIndividual(GameObject columnaActiva)
     {
+        GameManager.gameM.BotonPresionadoSFX();
         // 1. Apagamos todas las columnas por defecto
         rankingSamurai.SetActive(false);
         rankingMinotauro.SetActive(false);
