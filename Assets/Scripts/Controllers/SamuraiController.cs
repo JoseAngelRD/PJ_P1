@@ -19,28 +19,26 @@ public class SamuraiController : CharacterController
     {
         // --- 1. ACCIONES ---
         Accion pego = new AtaqueBasico(this);
-        Accion esquivo = new Esquivo(this);
+        Accion meAlejo = new Esquivo(this);
         Accion meAcerco = new MeAcerco(this); 
         Accion meQuedoQuieto = new MeQuedoQuieto(this);
         Accion dashDefensivo = new DashDefensivo(this);
         Accion dashOfensivo = new DashOfensivo(this);
         Accion dashAtaque = new DashAtaque(this);
-        Accion combo = new Combo(this);
-
-        Accion nada = new SeguirUltimaAccion();
+        Accion combo = new Combo(this);        
 
         // --- 2. NODOS DE PROBABILIDAD ---
-        Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meQuedoQuieto, 20f); 
-        Decision prob_BajoAtaque_VidaBaja_No = new ProbabilidadDecision(esquivo, meQuedoQuieto, 80f); 
+        Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meAlejo, 20f); 
+        Decision prob_BajoAtaque_VidaBaja_No = new ProbabilidadDecision(meAlejo, meQuedoQuieto, 80f); 
         
-        Decision prob_NoAtaca_VidaBaja_Si = new ProbabilidadDecision(pego, nada, 60f);                
-        Decision prob_NoAtaca_VidaBaja_No = new ProbabilidadDecision(pego, nada, 40f);
+        Decision prob_NoAtaca_VidaBaja_Si = new ProbabilidadDecision(pego, meAlejo, 60f);                
+        Decision prob_NoAtaca_VidaBaja_No = new ProbabilidadDecision(pego, meQuedoQuieto, 40f);
         
         Decision prob_enDash_VidaBaja_Si = new ProbabilidadDecision(dashAtaque, combo, 50f);
         Decision prob_enDash_VidaBaja_No = new ProbabilidadDecision(dashAtaque, meAcerco, 10f);  
 
         Decision prob_noEnDash_VidaBaja_Si = new ProbabilidadDecision(dashOfensivo, meAcerco, 50f);
-        Decision prob_noEnDash_VidaBaja_No = new ProbabilidadDecision(meAcerco, nada, 40f);  
+        Decision prob_noEnDash_VidaBaja_No = new ProbabilidadDecision(meAcerco, meQuedoQuieto, 40f);  
 
         // --- 3. RAMA IZQUIERDA (EstaEnRangoMelee? -> Si) ---
         Decision bajoAtaque = new MenosMitadVida(prob_BajoAtaque_VidaBaja_Si, prob_BajoAtaque_VidaBaja_No, this);
