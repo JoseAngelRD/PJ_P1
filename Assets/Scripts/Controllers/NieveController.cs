@@ -125,8 +125,8 @@ public class NieveController : CharacterController
         Cronometro crono = FindObjectOfType<Cronometro>();
         if (crono != null)
         {
-            Debug.Log("Minotauro derrotado, deteniendo cronómetro...");
-            crono.DetenerYComprobarRecord("Minotauro");
+            Debug.Log("Nieve derrotado, deteniendo cronómetro...");
+            crono.DetenerYComprobarRecord("Nieve");
             Debug.Log("detenerYComprobarRecord ejecutado");
         }
         menuMuerte.SetActive(true);

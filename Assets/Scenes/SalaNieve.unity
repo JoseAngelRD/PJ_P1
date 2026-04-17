@@ -243,7 +243,7 @@ MonoBehaviour:
   hitsAtaques:
   - {fileID: 1183905405}
   - {fileID: 1618926336}
-  attackDamage: 100
+  attackDamage: 5
   daniado: 0
   isKnockback: 0
   shield: 0

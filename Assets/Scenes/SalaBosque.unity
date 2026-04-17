@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2059148078}
-  velocidad: 0.1
+  velocidad: 0.02
 --- !u!1 &91957557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,7 +5136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa2c8c8140560e42b7a99b6dee90515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
+  velocidad: 3
   jumpForce: 150
   dashForce: 10
   tamRaycast: 0.4
@@ -12049,8 +12049,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7416991, y: -0.115600705}
-  m_Size: {x: 3.178211, y: 3.6031368}
+  m_Offset: {x: 0.51136017, y: -0.3232963}
+  m_Size: {x: 1.2874994, y: 2.4677339}
   m_Direction: 0
 --- !u!114 &1913343231
 MonoBehaviour:
@@ -12724,7 +12724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  jumpForce: 6
+  jumpForce: 9
   dashForce: 10
   tamRaycast: 0.55
   movimiento: {x: 0, y: 0}
@@ -12737,7 +12737,7 @@ MonoBehaviour:
   hitsAtaques:
   - {fileID: 1534221719}
   - {fileID: 555469474}
-  attackDamage: 100
+  attackDamage: 5
   daniado: 0
   isKnockback: 0
   shield: 0
