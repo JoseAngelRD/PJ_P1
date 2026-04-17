@@ -22,12 +22,17 @@ public class MenuOpciones : MonoBehaviour
 
         ConfigurarResolucion();
         ConfigurarModoPantalla();
+
+        CargarAjustesGuardados();
     }
 
     void OnEnable()
     {
-        volumen.value = GameManager.gameM.music.volume;
-        efectos.value = GameManager.gameM.SFX.volume;
+        if (GameManager.gameM != null)
+        {
+            volumen.value = GameManager.gameM.music.volume;
+            efectos.value = GameManager.gameM.SFX.volume;
+        }
     }
 
     private void VolverOpciones()
@@ -39,11 +44,13 @@ public class MenuOpciones : MonoBehaviour
     private void Volumen()
     {        
         GameManager.gameM.music.volume = volumen.value;
+        PlayerPrefs.SetFloat("VolumenMusica", volumen.value);
     }
 
     private void VolumenSFX()
     {        
         GameManager.gameM.SFX.volume = efectos.value;
+        PlayerPrefs.SetFloat("VolumenSFX", efectos.value);
     }
 
     private void ConfigurarResolucion()
@@ -67,7 +74,10 @@ public class MenuOpciones : MonoBehaviour
         }
 
         dropdownResolucion.AddOptions(opciones);
-        dropdownResolucion.value = resolucionActual;
+        int resolucionGuardada = PlayerPrefs.GetInt("Resolucion", resolucionActual);
+        if (resolucionGuardada >= resoluciones.Length) resolucionGuardada = resolucionActual;
+
+        dropdownResolucion.value = resolucionGuardada;
         dropdownResolucion.RefreshShownValue();
 
         dropdownResolucion.onValueChanged.AddListener(CambiarResolucion);
@@ -77,6 +87,7 @@ public class MenuOpciones : MonoBehaviour
     {
         Resolution res = resoluciones[indiceResolucion];
         Screen.SetResolution(res.width, res.height, Screen.fullScreenMode);
+        PlayerPrefs.SetInt("Resolucion", indiceResolucion);
     }
 
     private void ConfigurarModoPantalla()
@@ -96,5 +107,23 @@ public class MenuOpciones : MonoBehaviour
             case 1: Screen.fullScreenMode = FullScreenMode.FullScreenWindow; break;
             case 2: Screen.fullScreenMode = FullScreenMode.Windowed; break;
         }
+        PlayerPrefs.SetInt("ModoPantalla", indice);
+    }
+
+    private void CargarAjustesGuardados()
+    {
+        // 1. Cargar volumen (Si no existe, devuelve 0.5f por defecto)
+        volumen.value = PlayerPrefs.GetFloat("VolumenMusica", 0.5f);
+        efectos.value = PlayerPrefs.GetFloat("VolumenSFX", 0.5f);
+
+        // 2. Cargar Modo Pantalla (Si no existe, devuelve 0 por defecto)
+        int modoPantalla = PlayerPrefs.GetInt("ModoPantalla", 0);
+        dropdownPantalla.value = modoPantalla;
+        CambiarModoPantalla(modoPantalla); // Lo aplicamos directamente
+
+        // (La resolución ya se carga y aplica dentro de ConfigurarResolucion)
+        
+        // Forzamos un guardado manual por seguridad
+        PlayerPrefs.Save(); 
     }
 }

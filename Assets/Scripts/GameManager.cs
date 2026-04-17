@@ -16,6 +16,16 @@ public class GameManager : MonoBehaviour
 
     public AudioClip botonPresionado;
 
+    void Start()
+    {
+        // Asegurarse de que el GameManager aplique el volumen guardado nada más abrir el juego
+        if (music != null) 
+            music.volume = PlayerPrefs.GetFloat("VolumenMusica", 0.5f);
+            
+        if (SFX != null) 
+            SFX.volume = PlayerPrefs.GetFloat("VolumenSFX", 0.5f);
+    }
+
     private void Awake()
     {
         if (gameM == null)
