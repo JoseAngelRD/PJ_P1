@@ -8,6 +8,7 @@ public abstract class Decision : NodoArbol
 
     public override NodoArbol Decide(GameObject player)
     {
+        Debug.Log(this);
         return ObtenerRama(player).Decide(player);
     }
 }

@@ -36,10 +36,7 @@ public class DamageReceiver : MonoBehaviour
             } else
             {
                 vidaUI.localScale = new Vector3(0, vidaUI.localScale.y, vidaUI.localScale.z);    
-            }
-            
-        
-            Debug.Log(gameObject.name + " vida: " + vida);
+            }            
 
             if (vida <= 0)
             {
@@ -55,8 +52,7 @@ public class DamageReceiver : MonoBehaviour
     protected virtual void Morir()
     {
         string bossActual = "";
-        animator.SetTrigger("Death");
-        Debug.Log(gameObject.name + " muerto");
+        animator.SetTrigger("Death");        
 
         if (gameObject.name != "Player")
         {

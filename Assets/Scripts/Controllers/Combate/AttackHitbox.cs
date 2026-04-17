@@ -28,9 +28,7 @@ public class AttackHitbox : MonoBehaviour
     }*/
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log(gameObject.name + " Golpeando a: " + other.name);
-
+    {        
         if (((1 << other.gameObject.layer) & targetMask) == 0)
             return;
 

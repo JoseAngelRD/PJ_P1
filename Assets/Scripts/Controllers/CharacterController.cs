@@ -6,7 +6,8 @@ public abstract class CharacterController : MonoBehaviour
 {
     [SerializeField] protected float velocidad = 5.0f;
     [SerializeField] protected float jumpForce = 150f;
-    [SerializeField] private float dashForce = 10f;
+    [SerializeField] public float dashForce = 10f;
+    [SerializeField] public float dashDuration = 0.2f;
     [SerializeField] protected float tamRaycast = 0.4f;
     protected Rigidbody2D rb2D;
     public Vector2 movimiento;
@@ -18,8 +19,9 @@ public abstract class CharacterController : MonoBehaviour
     public bool onGround = false;
 
     // Variables de combate
+    public bool accionActiva = false;
     [SerializeField] public bool atacando = false;
-    protected bool isDashing = false;
+    [SerializeField] public bool isDashing = false;
     [SerializeField] List<GameObject> hitsAtaques;
     [SerializeField] protected float attackDamage;
     public bool daniado = false;
@@ -73,14 +75,20 @@ public abstract class CharacterController : MonoBehaviour
         StartCoroutine(Aterrizaje());
     }
 
-    public IEnumerator Dash()
+    public void HacerDash()
     {
-        GameManager.gameM.ReproducirSonido(dashSFX, 0);
-        rb2D.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
+        StartCoroutine(Dash());
+    }
+
+    public IEnumerator Dash()
+    {        
+        GameManager.gameM.ReproducirSonido(dashSFX, 0);        
+        rb2D.velocity = Vector2.right * transform.localScale.x * dashForce;
+        //rb2D.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
         isDashing = true;
 
-        yield return new WaitForSeconds(0.2f);
-        rb2D.velocity = Vector2.zero;
+        yield return new WaitForSeconds(dashDuration);
+        //rb2D.velocity = Vector2.zero;
         isDashing = false;
     }
 
@@ -131,6 +139,24 @@ public abstract class CharacterController : MonoBehaviour
     public void SetMovimiento(Vector2 nuevoMovimiento)
     {
         movimiento = nuevoMovimiento;
+    }
+
+    public void Apuntar(GameObject player, bool aObjetivo)
+    {
+        Debug.Log("Apuntando");
+        float direccionX = player.transform.position.x - transform.position.x;
+        float signo = aObjetivo ? Mathf.Sign(direccionX) : -Mathf.Sign(direccionX);
+        transform.localScale = new Vector3(signo * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
+
+    public IEnumerator EjecutarConGuardia(IEnumerator corrutina, float cooldown)
+    {
+        accionActiva = true;
+        //Debug.Log("ACCION ACTIVA");
+        yield return StartCoroutine(corrutina);
+        //Debug.Log("FIN ACCION");
+        yield return new WaitForSeconds(cooldown);
+        accionActiva = false;
     }
 
 }
