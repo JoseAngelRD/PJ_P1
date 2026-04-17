@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class MenuOpciones : MonoBehaviour
 {
+    [SerializeField] private GameObject panelOpciones;
     [SerializeField] private Button volverOpc;
     [SerializeField] private Slider volumen;
     [SerializeField] private Slider efectos;
     [SerializeField] private TMP_Dropdown dropdownResolucion;
     [SerializeField] private TMP_Dropdown dropdownPantalla;
+    [SerializeField] private Button controles;
     private Resolution[] resoluciones;
+
+    [SerializeField] private GameObject panelControles;
+    [SerializeField] private Button volverControles;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +24,9 @@ public class MenuOpciones : MonoBehaviour
         volverOpc.onClick.AddListener(() => VolverOpciones());        
         volumen.onValueChanged.AddListener(delegate { Volumen(); });
         efectos.onValueChanged.AddListener(delegate { VolumenSFX(); });
+        controles.onClick.AddListener(() => AbrirControles());
+
+        volverControles.onClick.AddListener(() => CerrarControles());
 
         ConfigurarResolucion();
         ConfigurarModoPantalla();
@@ -125,5 +133,19 @@ public class MenuOpciones : MonoBehaviour
         
         // Forzamos un guardado manual por seguridad
         PlayerPrefs.Save(); 
+    }
+
+    private void AbrirControles()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        panelOpciones.SetActive(false);
+        panelControles.SetActive(true);
+    }
+
+    private void CerrarControles()
+    {
+        GameManager.gameM.BotonPresionadoSFX();
+        panelControles.SetActive(false);
+        panelOpciones.SetActive(true);        
     }
 }
