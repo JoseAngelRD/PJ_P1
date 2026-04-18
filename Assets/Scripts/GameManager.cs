@@ -23,11 +23,18 @@ public class GameManager : MonoBehaviour
             music.volume = PlayerPrefs.GetFloat("VolumenMusica", 0.5f);
             
         if (SFX != null) 
-            SFX.volume = PlayerPrefs.GetFloat("VolumenSFX", 0.5f);
+            SFX.volume = PlayerPrefs.GetFloat("VolumenSFX", 0.5f);        
+    }
 
+    void Update()
+    {
         // Resetear datos
-        //PlayerPrefs.DeleteAll();
-        //PlayerPrefs.Save();
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.B))
+        {
+            Debug.Log("Reset datos");
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+        }
     }
 
     private void Awake()
