@@ -11704,7 +11704,7 @@ MonoBehaviour:
   hitsAtaques:
   - {fileID: 387292673}
   - {fileID: 1848439513}
-  attackDamage: 55
+  attackDamage: 10
   daniado: 0
   isKnockback: 0
   ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}

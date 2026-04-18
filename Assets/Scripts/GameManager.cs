@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
             
         if (SFX != null) 
             SFX.volume = PlayerPrefs.GetFloat("VolumenSFX", 0.5f);
+
+        // Resetear datos
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.Save();
     }
 
     private void Awake()
