@@ -7,11 +7,6 @@ public class AttackHitbox : MonoBehaviour
     [SerializeField] float damage = 1;
     [SerializeField] LayerMask targetMask;
 
-    void Start()
-    {
-        Debug.Log("StartAttack");
-    }
-
     /*void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("TriggerEnter");

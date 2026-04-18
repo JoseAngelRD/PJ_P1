@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,6 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] protected float attackDamage;
     public bool daniado = false;
     public bool isKnockback = false;
-    [SerializeField] protected bool shield = false;
     [SerializeField] private AudioClip ataqueSFX;
     [SerializeField] private AudioClip dashSFX;
     protected DamageReceiver damageReceiver;
@@ -49,7 +49,7 @@ public abstract class CharacterController : MonoBehaviour
         {
             hit.GetComponent<AttackHitbox>().SetDamage(attackDamage);
         }
-        rb2D = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();        
         damageReceiver = GetComponentInChildren<DamageReceiver>();
         animator = gameObject.GetComponent<Animator>();
         damageReceiver = GetComponentInChildren<DamageReceiver>();
@@ -77,15 +77,22 @@ public abstract class CharacterController : MonoBehaviour
 
     public void HacerDash()
     {
+        if (isDashing) return;
+        isDashing = true;
+        Debug.Log("Dash desde objeto: " + gameObject.name +
+              " | instanceID: " + GetInstanceID() +
+              " | frame: " + Time.frameCount);      
         StartCoroutine(Dash());
     }
 
     public IEnumerator Dash()
-    {        
-        GameManager.gameM.ReproducirSonido(dashSFX, 0);        
-        rb2D.velocity = Vector2.right * transform.localScale.x * dashForce;
-        //rb2D.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
-        isDashing = true;
+    {                       
+        GameManager.gameM.ReproducirSonido(dashSFX, 0);             
+        if (rb2D != null)
+        {
+            rb2D.velocity = Vector2.right * transform.localScale.x * dashForce;
+        }           
+        //rb2D.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);        
 
         yield return new WaitForSeconds(dashDuration);
         //rb2D.velocity = Vector2.zero;
@@ -142,8 +149,7 @@ public abstract class CharacterController : MonoBehaviour
     }
 
     public void Apuntar(GameObject player, bool aObjetivo)
-    {
-        Debug.Log("Apuntando");
+    {        
         float direccionX = player.transform.position.x - transform.position.x;
         float signo = aObjetivo ? Mathf.Sign(direccionX) : -Mathf.Sign(direccionX);
         transform.localScale = new Vector3(signo * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);

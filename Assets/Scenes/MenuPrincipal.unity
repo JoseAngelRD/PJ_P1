@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2.000.000.000$
+  m_text: 3.000.000.000$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
   m_sharedMaterial: {fileID: -7486354701596679052, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Asterio
+  m_text: Ronin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
   m_sharedMaterial: {fileID: -7486354701596679052, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
@@ -2841,7 +2841,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 300, y: -15}
-  m_SizeDelta: {x: 199.61, y: 52.4}
+  m_SizeDelta: {x: 261.1, y: 301.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544851278
 MonoBehaviour:
@@ -4204,7 +4204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2.000.000.000$
+  m_text: 1.000.000.000$
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
   m_sharedMaterial: {fileID: -7486354701596679052, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
@@ -5599,7 +5599,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 300, y: -15}
-  m_SizeDelta: {x: 199.61, y: 52.4}
+  m_SizeDelta: {x: 261.1, y: 301.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036562084
 MonoBehaviour:
@@ -6227,8 +6227,8 @@ RectTransform:
   m_Children:
   - {fileID: 107005748}
   - {fileID: 178097669}
-  - {fileID: 1250393690}
   - {fileID: 2128712790}
+  - {fileID: 1250393690}
   - {fileID: 1504334237}
   m_Father: {fileID: 1233542187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6373,7 +6373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Asterio
+  m_text: Glacius
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}
   m_sharedMaterial: {fileID: -7486354701596679052, guid: 1b9b1fb7181429f478948dc62993fdf7, type: 2}

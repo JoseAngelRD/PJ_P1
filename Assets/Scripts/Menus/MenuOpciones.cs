@@ -142,7 +142,7 @@ public class MenuOpciones : MonoBehaviour
         panelControles.SetActive(true);
     }
 
-    private void CerrarControles()
+    public void CerrarControles()
     {
         GameManager.gameM.BotonPresionadoSFX();
         panelControles.SetActive(false);

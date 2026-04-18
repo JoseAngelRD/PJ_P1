@@ -7717,7 +7717,6 @@ GameObject:
   - component: {fileID: 1298814001}
   - component: {fileID: 1298814003}
   - component: {fileID: 1298814004}
-  - component: {fileID: 1298814005}
   - component: {fileID: 1298814006}
   m_Layer: 0
   m_Name: Samurai
@@ -7787,7 +7786,7 @@ Transform:
   m_GameObject: {fileID: 1298813999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: -3.01, z: 0}
+  m_LocalPosition: {x: 8.56, y: -2.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7846,43 +7845,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1298814005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298813999}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585fbc144b8f20e429fda8cef4dbefb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 5
-  jumpForce: 7
-  dashForce: 25
-  dashDuration: 0.2
-  tamRaycast: 0.9
-  movimiento: {x: 0, y: 0}
-  cooldownActual: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  onGround: 0
-  accionActiva: 0
-  atacando: 0
-  isDashing: 0
-  hitsAtaques:
-  - {fileID: 1513991480}
-  - {fileID: 1956795247}
-  - {fileID: 349986123}
-  attackDamage: 100
-  daniado: 0
-  isKnockback: 0
-  shield: 0
-  ataqueSFX: {fileID: 8300000, guid: 8463805e844b4f84f9cefcda50c1a34a, type: 3}
-  dashSFX: {fileID: 8300000, guid: 04c61d188cd89f94ea61cb77fcaca956, type: 3}
-  menuMuerte: {fileID: 214326029}
 --- !u!114 &1298814006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7897,7 +7859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 3
   jumpForce: 7
-  dashForce: 15
+  dashForce: 20
   dashDuration: 0.2
   tamRaycast: 0.9
   movimiento: {x: 0, y: 0}
@@ -7916,7 +7878,6 @@ MonoBehaviour:
   attackDamage: 5
   daniado: 0
   isKnockback: 0
-  shield: 0
   ataqueSFX: {fileID: 8300000, guid: 8463805e844b4f84f9cefcda50c1a34a, type: 3}
   dashSFX: {fileID: 8300000, guid: 04c61d188cd89f94ea61cb77fcaca956, type: 3}
   menuMuerte: {fileID: 214326029}
@@ -11743,10 +11704,9 @@ MonoBehaviour:
   hitsAtaques:
   - {fileID: 387292673}
   - {fileID: 1848439513}
-  attackDamage: 10
+  attackDamage: 55
   daniado: 0
   isKnockback: 0
-  shield: 0
   ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
   dashSFX: {fileID: 0}
   menuMuerte: {fileID: 659781467}

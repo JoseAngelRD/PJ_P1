@@ -30,6 +30,7 @@ public class MenuPausa : MonoBehaviour
             ToggleMenu();
             TogglePausar();
             menuOpciones.SetActive(false);
+            menuOpciones.GetComponent<MenuOpciones>().CerrarControles();
             
             GameManager.gameM.TogglePause();
         }

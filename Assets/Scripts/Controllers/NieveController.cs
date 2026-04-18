@@ -54,34 +54,23 @@ public class NieveController : CharacterController
     }
 
     void Update()
-    {  
-        Debug.Log("Raiz del árbol de decisiones: " + raizArbol);
-        // Si el boss está muerto, dañado o sufriendo knockback, detenemos la IA para respetar físicas y animaciones
-        if (vidaActual <= 0 || daniado || isKnockback) 
+    {          
+        // Acciones que paran la IA
+        if (vidaActual <= 0 || daniado || isKnockback || GameManager.gameM.isGameOver) 
         {
-            Debug.Log("Vida Actual: " + vidaActual + ", Dañado: " + daniado + ", Knockback: " + isKnockback);
+            //Debug.Log("Vida Actual: " + vidaActual + ", Dañado: " + daniado + ", Knockback: " + isKnockback);
             return;
         }
 
         if (cooldownActual > 0) cooldownActual -= Time.deltaTime;
 
         if (atacando || isDashing)
-        {
-            Debug.Log("2" + raizArbol);
+        {            
             movimiento = Vector2.zero;
             return;
         }
         
-        // Ejecutar árbol de decisiones de la IA
-        
-         if (raizArbol != null && player != null)
-        {
-            NodoArbol nodoFinal = raizArbol.Decide(player);
-            if (nodoFinal is Accion accion)
-            {
-                accion.EjecutarAccion(player);
-            }
-        }
+        // Ejecutar árbol de decisiones de la IA        
         if (raizArbol != null && player != null)
         {
             NodoArbol nodoFinal = raizArbol.Decide(player);
@@ -102,32 +91,32 @@ public class NieveController : CharacterController
 
     void FixedUpdate()
     {
-        // Respetamos físicas externas (como el Knockback) si está sufriendo daño
+        // Respetamos fisicas externas
         if (vidaActual <= 0 || daniado || isKnockback) return; 
 
         rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
     }
-
-    // Al ser un método abstracto en la clase base, ESTAMOS OBLIGADOS a usar override
+    
     public override void Atacar(int id)
     {
         if (id == 0)
         {
             animator.SetTrigger("Attack");
-            atacando = true; // Variable del padre
+            atacando = true;
             cooldownActual = cooldownMaximo; 
         }
     }
     
     public void FinalizarCombate()
     {
-        // 1. Buscamos el cronómetro y le pasamos el nombre del Boss
+        GameManager.gameM.isGameOver = true;
+        // Buscamos el cronometro y le pasamos el nombre del Boss
         Cronometro crono = FindObjectOfType<Cronometro>();
         if (crono != null)
         {
-            Debug.Log("Nieve derrotado, deteniendo cronómetro...");
+            //Debug.Log("Nieve derrotado, deteniendo cronómetro...");
             crono.DetenerYComprobarRecord("Nieve");
-            Debug.Log("detenerYComprobarRecord ejecutado");
+            //Debug.Log("detenerYComprobarRecord ejecutado");
         }
         menuMuerte.SetActive(true);
     }

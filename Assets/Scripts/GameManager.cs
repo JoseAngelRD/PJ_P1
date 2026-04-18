@@ -69,8 +69,7 @@ public class GameManager : MonoBehaviour
         float volumenOriginal = music.volume;
         music.volume = 0;
         while (music.volume < volumenOriginal)
-        {
-            Debug.Log(music.volume);
+        {            
             music.volume += 0.1f;
             yield return new WaitForSeconds(0.01f);
         }
@@ -78,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void BotonPresionadoSFX()
     {
+        SFX.pitch = 1;
         SFX.PlayOneShot(botonPresionado);
     }
 

@@ -39,12 +39,14 @@ public class EnRangoMelee : Decision
                     Mathf.Abs(min - centroBoss)
                 );
 
-                float distanciaPlayer = Mathf.Abs(player.transform.position.x - centroBoss);
-                Debug.Log(distanciaPlayer + ", " + rangoFinal);
+                float distanciaPlayer = Mathf.Abs(player.transform.position.x - centroBoss);                
+                
+                Vector3 centro = new Vector3(centroX, colision.transform.position.y, 0f);
+                Debug.DrawRay(centro, Vector3.right * rango, Color.green);
+                Debug.DrawRay(centro, Vector3.left * rango, Color.green);
 
                 if (distanciaPlayer <= rangoFinal)
-                {
-                    Debug.Log("EN RANGO MELEE");
+                {                    
                     return nodoVerdadero;
                 }                
             }

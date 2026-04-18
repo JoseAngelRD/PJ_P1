@@ -6,18 +6,15 @@ public class SamuraiController : CharacterController
     [Header("Configuración IA")]
     public GameObject player;    
     private NodoArbol raizArbol;    
-    
-    // Usamos 'new' y 'base.Start()' para no perder la inicialización de hitboxes, rb2D y animator del padre
     protected new void Start()
     {
         base.Start();
-        ConstruirArbolIA();
-        //Time.timeScale = 0.1f;
+        ConstruirArbolIA();        
     }
 
     private void ConstruirArbolIA()
     {
-        // --- 1. ACCIONES ---
+        // ACCIONES
         Accion pego = new AtaqueBasico(this);
         Accion meAlejo = new Esquivo(this);
         Accion meAcerco = new MeAcerco(this); 
@@ -27,7 +24,7 @@ public class SamuraiController : CharacterController
         Accion dashAtaque = new DashAtaque(this);
         Accion combo = new Combo(this);        
 
-        // --- 2. NODOS DE PROBABILIDAD ---
+        // PROBABILIDADES
         Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meAlejo, 20f); 
         Decision prob_BajoAtaque_VidaBaja_No = new ProbabilidadDecision(meAlejo, meQuedoQuieto, 80f); 
         
@@ -35,37 +32,32 @@ public class SamuraiController : CharacterController
         Decision prob_NoAtaca_VidaBaja_No = new ProbabilidadDecision(pego, meQuedoQuieto, 40f);
         
         Decision prob_enDash_VidaBaja_Si = new ProbabilidadDecision(dashAtaque, combo, 50f);
-        Decision prob_enDash_VidaBaja_No = new ProbabilidadDecision(dashAtaque, meAcerco, 10f);  
+        Decision prob_enDash_VidaBaja_No = new ProbabilidadDecision(dashAtaque, meAcerco, 80f);  
 
         Decision prob_noEnDash_VidaBaja_Si = new ProbabilidadDecision(dashOfensivo, meAcerco, 50f);
         Decision prob_noEnDash_VidaBaja_No = new ProbabilidadDecision(meAcerco, meQuedoQuieto, 40f);  
 
-        // --- 3. RAMA IZQUIERDA (EstaEnRangoMelee? -> Si) ---
+        // RAMA DERECHA
         Decision bajoAtaque = new MenosMitadVida(prob_BajoAtaque_VidaBaja_Si, prob_BajoAtaque_VidaBaja_No, this);
         Decision noAtaca = new MenosMitadVida(prob_NoAtaca_VidaBaja_Si, prob_NoAtaca_VidaBaja_No, this);        
 
         Decision meAtaca = new MeAtaca(bajoAtaque, noAtaca);
 
-        // --- 4. RAMA DERECHA (EstaEnRangoMelee? -> No) ---
+        // RAMA IZQUIERDA
         Decision enRangoDash_Si = new MenosMitadVida(prob_enDash_VidaBaja_Si, prob_enDash_VidaBaja_No, this);
         Decision enRangoDash_No = new MenosMitadVida(prob_noEnDash_VidaBaja_Si, prob_noEnDash_VidaBaja_No, this); 
 
         Decision enRangoDash = new EnRangoDash(enRangoDash_Si, enRangoDash_No, this.gameObject);
 
-        // --- 5. RAÍZ ---
+        // RAIZ
         raizArbol = new EnRangoMelee(meAtaca, enRangoDash, this.gameObject); 
     }
 
     void Update()
     {        
-        if (accionActiva) {            
-            return;
-        }
-
-        // Si el boss está muerto, dañado o sufriendo knockback, detenemos la IA para respetar físicas y animaciones
-        if (vidaActual <= 0 || daniado || isKnockback) 
-        {
-            //Debug.Log("Vida Actual: " + vidaActual + ", Dañado: " + daniado + ", Knockback: " + isKnockback);
+        // Acciones que paran la IA
+        if (vidaActual <= 0 || daniado || isKnockback || accionActiva || GameManager.gameM.isGameOver) 
+        {            
             return;
         }
 
@@ -75,42 +67,29 @@ public class SamuraiController : CharacterController
             return;
         }
 
-        // Ejecutar árbol de decisiones de la IA
-        Debug.Log("Ejecutando arbol");
+        // Arbol de decisiones
         if (raizArbol != null && player != null && !accionActiva)
         {
             NodoArbol nodoFinal = raizArbol.Decide(player);
             if (nodoFinal is Accion accion)
             {
-                accion.EjecutarAccion(player);
-                Debug.Log(accion);
+                accion.EjecutarAccion(player);                
             }
         }
-        /*if (raizArbol != null && player != null)
-        {
-            NodoArbol nodoFinal = raizArbol.Decide(player);
-            if (nodoFinal is Accion accion)
-            {
-                accion.EjecutarAccion(player);
-            }
-        }*/
 
         // Volteo de sprite (Flip)
         if (movimiento.x < 0.0f) transform.localScale = new Vector3(-Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else if (movimiento.x > 0.0f) transform.localScale = new Vector3(Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
-        // Actualizamos el Animator (ya instanciado en CharacterController)
+        // Actualizamos el Animator
         animator.SetFloat("Horizontal", movimiento.x);
         animator.SetFloat("Speed", movimiento.magnitude);
     }
 
     void FixedUpdate()
     {
-        // Respetamos físicas externas (como el Knockback) si está sufriendo daño
-        if (vidaActual <= 0 || daniado || isKnockback) return; 
-        if (isDashing)  {            
-            return;
-        }
+        // Respetar las fisicas externas
+        if (vidaActual <= 0 || daniado || isKnockback || isDashing) return;         
         rb2D.velocity = new Vector2(movimiento.x * velocidad, rb2D.velocity.y);
     }    
 
@@ -137,13 +116,14 @@ public class SamuraiController : CharacterController
     
     public void FinalizarCombate()
     {
-        // 1. Buscamos el cronómetro y le pasamos el nombre del Boss
+        GameManager.gameM.isGameOver = true;
+        // Buscamos el cronometro y le pasamos el nombre del Boss
         Cronometro crono = FindObjectOfType<Cronometro>();
         if (crono != null)
         {
-            Debug.Log("Samurai derrotado, deteniendo cronómetro...");
+            //Debug.Log("Samurai derrotado, deteniendo cronómetro...");
             crono.DetenerYComprobarRecord("Samurai");
-            Debug.Log("detenerYComprobarRecord ejecutado");
+            //Debug.Log("detenerYComprobarRecord ejecutado");
         }
         menuMuerte.SetActive(true);
     }

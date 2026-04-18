@@ -6,6 +6,12 @@ public class PlayerController : CharacterController
     // Update is called once per frame
     void Update()
     {
+        if (GetComponentInChildren<DamageReceiver>().GetVida() <= 0 || GameManager.gameM.isGameOver)
+        {
+            movimiento = Vector2.zero;
+            return;
+        }
+
         // Estado del player
         Debug.DrawRay(transform.position, Vector3.down * tamRaycast, Color.red);
         RaycastHit2D colisionDown = Physics2D.Raycast(transform.position, Vector3.down, tamRaycast, groundLayer);
@@ -22,29 +28,14 @@ public class PlayerController : CharacterController
         if (atacando)
         {            
             if (onGround) movimiento = Vector2.zero;
+            
+            // Bug animacion de ataque cortada -> se quedaba atacando a true por no acabar la animacion al tocar el suelo
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-            {
-                Debug.Log("Cancelado el ataque");
+            {                
                 EndAttack();
             }         
             return;
-        }
-
-        // Comprobar si se esta protegiendo
-        if (Input.GetMouseButton(1)) {
-            //animator.SetBool("Shield", true);
-            shield = true;      
-        } else
-        {
-            //animator.SetBool("Shield", false);
-            shield = false;
-        }
-        // Cancelar el movimiento si se esta protegiendo en el suelo
-        if (shield)
-        {
-            if (onGround) movimiento = Vector2.zero;
-            return;
-        }
+        }        
         
         movimiento.x = Input.GetAxisRaw("Horizontal");
         movimiento = movimiento.normalized;
@@ -79,8 +70,7 @@ public class PlayerController : CharacterController
         switch (id)
         {
             case 0:
-            {
-                Debug.Log("LeftClick");
+            {                
                 animator.SetTrigger("Attack");
                 atacando = true;         
             }

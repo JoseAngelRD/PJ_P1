@@ -115,7 +115,7 @@ AnimationClip:
   - time: 1.1666666
     functionName: ActivarMenuMuerte
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 9d01fe0a71d89e4498346e40ec996d58, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: f59938d7c773d9147b39897a6f5ab4b2, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
