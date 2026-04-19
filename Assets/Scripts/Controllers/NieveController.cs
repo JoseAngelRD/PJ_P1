@@ -5,8 +5,8 @@ public class NieveController : CharacterController
 {
     [Header("Configuración IA")]
     public GameObject player; 
-    public float rangoDeAtaque = 2f;
-    public float distanciaEsquive = 4f;
+    //public float rangoDeAtaque = 2f;
+    //public float distanciaEsquive = 4f;
     public float cooldownMaximo = 2f;    
 
     private NodoArbol raizArbol;
@@ -21,7 +21,7 @@ public class NieveController : CharacterController
     private void ConstruirArbolIA()
     {
         // --- 1. ACCIONES ---
-        Accion pego = new Pego(this); 
+        Accion pego = new AtaqueBasico(this); 
         Accion esquivo = new Esquivo(this);
         Accion meAcerco = new MeAcerco(this); 
         Accion meQuedoQuieto = new MeQuedoQuieto(this);
@@ -50,7 +50,7 @@ public class NieveController : CharacterController
         Decision menos50Lejos = new MenosMitadVida(coolMovSi50, coolMovNo50, this);
 
         // --- 5. RAÍZ ---
-        raizArbol = new EstaEnRango(meAtaca, menos50Lejos, this.transform, rangoDeAtaque); 
+        raizArbol = new EnRangoMelee(meAtaca, menos50Lejos, this.gameObject); 
     }
 
     void Update()

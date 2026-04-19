@@ -25,7 +25,7 @@ public class SamuraiController : CharacterController
         Accion combo = new Combo(this);        
 
         // PROBABILIDADES
-        Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meAlejo, 20f); 
+        Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meAlejo, 50f); 
         Decision prob_BajoAtaque_VidaBaja_No = new ProbabilidadDecision(meAlejo, meQuedoQuieto, 80f); 
         
         Decision prob_NoAtaca_VidaBaja_Si = new ProbabilidadDecision(pego, meAlejo, 60f);                

@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MinotauroController : CharacterController
 {
     [Header("Configuración IA")]
     public GameObject player;
-    public float rangoDeAtaque = 2f;
-    public float distanciaEsquive = 4f;
+    //public float rangoDeAtaque = 2f;
+    //public float distanciaEsquive = 4f;
     public float cooldownMaximo = 2f;
     private int direccionHuida = 0;
     // Referencia al script que maneja la vida    
@@ -23,7 +24,7 @@ public class MinotauroController : CharacterController
     private void ConstruirArbolIA()
     {
         // --- 1. ACCIONES ---
-        Accion pego = new Pego(this);
+        Accion pego = new AtaqueBasico(this);
         Accion esquivo = new Esquivo(this);
         Accion meAcerco = new MeAcerco(this);
         Accion meQuedoQuieto = new MeQuedoQuieto(this);
@@ -52,7 +53,7 @@ public class MinotauroController : CharacterController
         Decision menos50Lejos = new MenosMitadVida(coolMovSi50, coolMovNo50, this);
 
         // --- 5. RAÍZ ---
-        raizArbol = new EstaEnRango(meAtaca, menos50Lejos, this.transform, rangoDeAtaque);
+        raizArbol = new EnRangoMelee(meAtaca, menos50Lejos, this.gameObject);
     }
 
     void Update()
@@ -106,6 +107,17 @@ public class MinotauroController : CharacterController
                     direccionHuida = 1;
                 }
             }
+
+            // Desactivar el box fisico para que huya fuera del mapa
+            foreach (BoxCollider2D box in GetComponentsInChildren<BoxCollider2D>())
+            {
+                if (!box.isTrigger)
+                {
+                    box.enabled = false;
+                    break;
+                }
+            }
+
             transform.localScale = new Vector3(Math.Abs(transform.localScale.x)*-direccionHuida, transform.localScale.y, transform.localScale.z);
             rb2D.velocity = new Vector2(direccionHuida*10, 0);
         } else

@@ -1070,7 +1070,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2cffb352ff6412443b5b31e9879602ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1154,7 +1154,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2cffb352ff6412443b5b31e9879602ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2008,8 +2008,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214326029}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.551566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2550,7 +2550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 128
@@ -3320,7 +3319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 128
@@ -3600,7 +3598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -4213,7 +4210,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2cffb352ff6412443b5b31e9879602ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7766,7 +7763,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -236223756, guid: b893c916825305341a205dd00b7a38f6, type: 3}
+  m_Sprite: {fileID: 502755200, guid: b04ff15639fd454458d0f643b6bb3703, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8676,7 +8673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 128
@@ -9677,8 +9673,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1993acb246bee6a4093e8496b7184c4a, type: 2}
+  m_sharedMaterial: {fileID: -8071983446444039107, guid: 1993acb246bee6a4093e8496b7184c4a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11507,7 +11503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -11799,7 +11794,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 807418463, guid: aaaedf00d830d604db494451c5b072c6, type: 3}
+  m_Sprite: {fileID: -724162585, guid: aaaedf00d830d604db494451c5b072c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11819,7 +11814,7 @@ Transform:
   m_GameObject: {fileID: 1860392765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.06, y: -3.34, z: 0}
+  m_LocalPosition: {x: -2.437, y: -2.655, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11987,7 +11982,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2cffb352ff6412443b5b31e9879602ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12087,7 +12082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9188140a6fcf04fa8307e51fa6bfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
   targetMask:
     serializedVersion: 2
     m_Bits: 128
@@ -13034,7 +13028,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 2cffb352ff6412443b5b31e9879602ad, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13124,8 +13118,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "TU NOMBRE AQU\xCD\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1993acb246bee6a4093e8496b7184c4a, type: 2}
+  m_sharedMaterial: {fileID: -8071983446444039107, guid: 1993acb246bee6a4093e8496b7184c4a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

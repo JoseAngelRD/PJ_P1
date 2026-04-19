@@ -151,7 +151,15 @@ public abstract class CharacterController : MonoBehaviour
     public void Apuntar(GameObject player, bool aObjetivo)
     {        
         float direccionX = player.transform.position.x - transform.position.x;
-        float signo = aObjetivo ? Mathf.Sign(direccionX) : -Mathf.Sign(direccionX);
+
+        float signo;
+        if (gameObject.name == "Samurai")
+        {
+            signo = aObjetivo ? Mathf.Sign(direccionX) : -Mathf.Sign(direccionX);
+        } else
+        {
+            signo = aObjetivo ? -Mathf.Sign(direccionX) : Mathf.Sign(direccionX);
+        }
         transform.localScale = new Vector3(signo * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 

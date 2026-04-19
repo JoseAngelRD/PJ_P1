@@ -30,6 +30,7 @@ public class DamageReceiver : MonoBehaviour
         if (vida > 0)
         {
             vida -= cantidad;
+            vidaCooldown += cantidad;
             if (vida >= 0)
             {
                 vidaUI.localScale = new Vector3(vida / vidaMaxima, vidaUI.localScale.y, vidaUI.localScale.z);    

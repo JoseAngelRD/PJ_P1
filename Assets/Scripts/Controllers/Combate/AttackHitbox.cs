@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackHitbox : MonoBehaviour
 {
-    [SerializeField] float damage = 1;
+    private float damage = 1;
     [SerializeField] LayerMask targetMask;
 
     /*void OnTriggerStay2D(Collider2D other)
