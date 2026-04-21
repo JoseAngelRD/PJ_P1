@@ -5483,7 +5483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 100
-  fuerzaKnockback: 7
+  fuerzaKnockback: 3
   vidaUI: {fileID: 496064907}
 --- !u!1 &922230673
 GameObject:
@@ -11607,7 +11607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52bfcf3838efef428ef973f8a10d806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 3
+  velocidad: 5
   jumpForce: 150
   dashForce: 10
   dashDuration: 0.2
@@ -11623,15 +11623,13 @@ MonoBehaviour:
   isDashing: 0
   hitsAtaques:
   - {fileID: 1826419869}
-  attackDamage: 5
+  attackDamage: 20
   daniado: 0
   isKnockback: 0
   ataqueSFX: {fileID: 8300000, guid: 1648cd1a01e54fb48a222574fc5ad912, type: 3}
   dashSFX: {fileID: 0}
   menuMuerte: {fileID: 469057955}
   player: {fileID: 53462723}
-  rangoDeAtaque: 1.5
-  distanciaEsquive: 4
   cooldownMaximo: 2
 --- !u!1 &1948976663
 GameObject:

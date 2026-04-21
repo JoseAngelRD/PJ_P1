@@ -7872,7 +7872,7 @@ MonoBehaviour:
   - {fileID: 1513991480}
   - {fileID: 1956795247}
   - {fileID: 349986123}
-  attackDamage: 5
+  attackDamage: 10
   daniado: 0
   isKnockback: 0
   ataqueSFX: {fileID: 8300000, guid: 8463805e844b4f84f9cefcda50c1a34a, type: 3}
