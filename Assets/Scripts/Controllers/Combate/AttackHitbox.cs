@@ -7,21 +7,6 @@ public class AttackHitbox : MonoBehaviour
     private float damage = 1;
     [SerializeField] LayerMask targetMask;
 
-    /*void OnTriggerStay2D(Collider2D other)
-    {
-        Debug.Log("TriggerEnter");
-        if ((targetMask.value & (1 << other.gameObject.layer)) == 0)
-            return;
-
-        DamageReceiver dmg = other.GetComponent<DamageReceiver>();
-        
-        if (dmg != null)
-        {
-            Debug.Log("Player encontrado");
-            dmg.RecibirDanio(damage, transform.position);
-        }
-    }*/
-
     void OnTriggerEnter2D(Collider2D other)
     {        
         if (((1 << other.gameObject.layer) & targetMask) == 0)
@@ -40,3 +25,4 @@ public class AttackHitbox : MonoBehaviour
         this.damage = damage;
     }
 }
+

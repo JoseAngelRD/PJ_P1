@@ -22,7 +22,7 @@ public class SamuraiController : CharacterController
         Accion dashDefensivo = new DashDefensivo(this);
         Accion dashOfensivo = new DashOfensivo(this);
         Accion dashAtaque = new DashAtaque(this);
-        Accion combo = new Combo(this);        
+        Accion combo = new Combo(this);
 
         // PROBABILIDADES
         Decision prob_BajoAtaque_VidaBaja_Si = new ProbabilidadDecision(dashDefensivo, meAlejo, 50f); 
